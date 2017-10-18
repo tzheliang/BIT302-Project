@@ -1,5 +1,8 @@
 @charset "UTF-8";
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -29,12 +32,18 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
@@ -47,13 +56,19 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
@@ -70,7 +85,10 @@ Copyright (c) 2013 Daniel Eden
   0%, 50%, 100% {
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   25%, 75% {
     opacity: 0;
   }
@@ -80,7 +98,10 @@ Copyright (c) 2013 Daniel Eden
   0%, 50%, 100% {
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   25%, 75% {
     opacity: 0;
   }
@@ -98,12 +119,18 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -116,13 +143,19 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -140,22 +173,34 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   30% {
     -webkit-transform: scaleX(1.25) scaleY(0.75);
     transform: scaleX(1.25) scaleY(0.75);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: scaleX(0.75) scaleY(1.25);
     transform: scaleX(0.75) scaleY(1.25);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: scaleX(1.15) scaleY(0.85);
     transform: scaleX(1.15) scaleY(0.85);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -168,25 +213,37 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   30% {
     -webkit-transform: scaleX(1.25) scaleY(0.75);
     -ms-transform: scaleX(1.25) scaleY(0.75);
     transform: scaleX(1.25) scaleY(0.75);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: scaleX(0.75) scaleY(1.25);
     -ms-transform: scaleX(0.75) scaleY(1.25);
     transform: scaleX(0.75) scaleY(1.25);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: scaleX(1.15) scaleY(0.85);
     -ms-transform: scaleX(1.15) scaleY(0.85);
     transform: scaleX(1.15) scaleY(0.85);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -204,12 +261,18 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20%, 40%, 60%, 80% {
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
@@ -222,13 +285,19 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translateX(-10px);
     -ms-transform: translateX(-10px);
     transform: translateX(-10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20%, 40%, 60%, 80% {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
@@ -246,22 +315,34 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: rotate(5deg);
     transform: rotate(5deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -274,25 +355,37 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: rotate(-10deg);
     -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: rotate(5deg);
     -ms-transform: rotate(5deg);
     transform: rotate(5deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     transform: rotate(-5deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -313,22 +406,34 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   10%, 20% {
     -webkit-transform: scale(0.9) rotate(-3deg);
     transform: scale(0.9) rotate(-3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   30%, 50%, 70%, 90% {
     -webkit-transform: scale(1.1) rotate(3deg);
     transform: scale(1.1) rotate(3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40%, 60%, 80% {
     -webkit-transform: scale(1.1) rotate(-3deg);
     transform: scale(1.1) rotate(-3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: scale(1) rotate(0);
     transform: scale(1) rotate(0);
@@ -341,25 +446,37 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   10%, 20% {
     -webkit-transform: scale(0.9) rotate(-3deg);
     -ms-transform: scale(0.9) rotate(-3deg);
     transform: scale(0.9) rotate(-3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   30%, 50%, 70%, 90% {
     -webkit-transform: scale(1.1) rotate(3deg);
     -ms-transform: scale(1.1) rotate(3deg);
     transform: scale(1.1) rotate(3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40%, 60%, 80% {
     -webkit-transform: scale(1.1) rotate(-3deg);
     -ms-transform: scale(1.1) rotate(-3deg);
     transform: scale(1.1) rotate(-3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: scale(1) rotate(0);
     -ms-transform: scale(1) rotate(0);
@@ -379,32 +496,50 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   15% {
     -webkit-transform: translateX(-25%) rotate(-5deg);
     transform: translateX(-25%) rotate(-5deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   30% {
     -webkit-transform: translateX(20%) rotate(3deg);
     transform: translateX(20%) rotate(3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   45% {
     -webkit-transform: translateX(-15%) rotate(-3deg);
     transform: translateX(-15%) rotate(-3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: translateX(10%) rotate(2deg);
     transform: translateX(10%) rotate(2deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   75% {
     -webkit-transform: translateX(-5%) rotate(-1deg);
     transform: translateX(-5%) rotate(-1deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
@@ -417,37 +552,55 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0%);
     transform: translateX(0%);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   15% {
     -webkit-transform: translateX(-25%) rotate(-5deg);
     -ms-transform: translateX(-25%) rotate(-5deg);
     transform: translateX(-25%) rotate(-5deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   30% {
     -webkit-transform: translateX(20%) rotate(3deg);
     -ms-transform: translateX(20%) rotate(3deg);
     transform: translateX(20%) rotate(3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   45% {
     -webkit-transform: translateX(-15%) rotate(-3deg);
     -ms-transform: translateX(-15%) rotate(-3deg);
     transform: translateX(-15%) rotate(-3deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: translateX(10%) rotate(2deg);
     -ms-transform: translateX(10%) rotate(2deg);
     transform: translateX(10%) rotate(2deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   75% {
     -webkit-transform: translateX(-5%) rotate(-1deg);
     -ms-transform: translateX(-5%) rotate(-1deg);
     transform: translateX(-5%) rotate(-1deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
@@ -466,18 +619,27 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(.3);
     transform: scale(.3);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 1;
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   70% {
     -webkit-transform: scale(.9);
     transform: scale(.9);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -492,20 +654,29 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(.3);
     transform: scale(.3);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 1;
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   70% {
     -webkit-transform: scale(.9);
     -ms-transform: scale(.9);
     transform: scale(.9);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -525,18 +696,27 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px);
     transform: translateY(30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -550,20 +730,29 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px);
     -ms-transform: translateY(30px);
     transform: translateY(30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -582,18 +771,27 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(-2000px);
     transform: translateX(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateX(30px);
     transform: translateX(30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -607,20 +805,29 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(-2000px);
     transform: translateX(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateX(30px);
     -ms-transform: translateX(30px);
     transform: translateX(30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateX(-10px);
     -ms-transform: translateX(-10px);
     transform: translateX(-10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -639,18 +846,27 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(2000px);
     transform: translateX(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateX(-30px);
     transform: translateX(-30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -664,20 +880,29 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(2000px);
     transform: translateX(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateX(-30px);
     -ms-transform: translateX(-30px);
     transform: translateX(-30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
     transform: translateX(10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -696,18 +921,27 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(2000px);
     transform: translateY(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -721,20 +955,29 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(2000px);
     transform: translateY(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -752,18 +995,27 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   25% {
     -webkit-transform: scale(.95);
     transform: scale(.95);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 1;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.3);
@@ -777,20 +1029,29 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   25% {
     -webkit-transform: scale(.95);
     -ms-transform: scale(.95);
     transform: scale(.95);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 1;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.3);
@@ -809,13 +1070,19 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
@@ -829,14 +1096,20 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateY(-20px);
     -ms-transform: translateY(-20px);
     transform: translateY(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
@@ -855,13 +1128,19 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateX(20px);
     transform: translateX(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -875,14 +1154,20 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
     transform: translateX(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -901,13 +1186,19 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -921,14 +1212,20 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateX(-20px);
     -ms-transform: translateX(-20px);
     transform: translateX(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -947,13 +1244,19 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
@@ -967,14 +1270,20 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20% {
     opacity: 1;
     -webkit-transform: translateY(20px);
     -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
@@ -992,7 +1301,10 @@ Copyright (c) 2013 Daniel Eden
   0% {
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
   }
@@ -1002,7 +1314,10 @@ Copyright (c) 2013 Daniel Eden
   0% {
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
   }
@@ -1019,7 +1334,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1034,7 +1352,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(-20px);
     transform: translateY(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1054,7 +1375,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1069,7 +1393,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1089,7 +1416,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1104,7 +1434,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(-20px);
     transform: translateX(-20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1124,7 +1457,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(-2000px);
     transform: translateX(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1139,7 +1475,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(-2000px);
     transform: translateX(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1159,7 +1498,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(20px);
     transform: translateX(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1174,7 +1516,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(20px);
     transform: translateX(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1194,7 +1539,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(2000px);
     transform: translateX(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1209,7 +1557,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(2000px);
     transform: translateX(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -1229,7 +1580,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1244,7 +1598,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1264,7 +1621,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(2000px);
     transform: translateY(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1279,7 +1639,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(2000px);
     transform: translateY(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1297,7 +1660,10 @@ Copyright (c) 2013 Daniel Eden
   0% {
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
   }
@@ -1307,7 +1673,10 @@ Copyright (c) 2013 Daniel Eden
   0% {
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
   }
@@ -1324,7 +1693,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -1339,7 +1711,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -1359,7 +1734,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
@@ -1374,7 +1752,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
@@ -1394,7 +1775,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
@@ -1409,7 +1793,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
@@ -1429,7 +1816,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -1444,7 +1834,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -1464,7 +1857,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(20px);
@@ -1479,7 +1875,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(20px);
@@ -1499,7 +1898,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -1514,7 +1916,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -1534,7 +1939,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
@@ -1549,7 +1957,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
@@ -1569,7 +1980,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
@@ -1584,7 +1998,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
@@ -1605,28 +2022,40 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: perspective(400px) translateZ(150px) rotateY(-190deg) scale(1);
     transform: perspective(400px) translateZ(150px) rotateY(-190deg) scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     -webkit-transform: perspective(400px) translateZ(150px) rotateY(-170deg) scale(1);
     transform: perspective(400px) translateZ(150px) rotateY(-170deg) scale(1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
     transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(1);
     transform: perspective(400px) translateZ(0) rotateY(0deg) scale(1);
@@ -1643,7 +2072,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: perspective(400px) translateZ(150px) rotateY(-190deg) scale(1);
     -ms-transform: perspective(400px) translateZ(150px) rotateY(-190deg) scale(1);
@@ -1651,7 +2083,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     -webkit-transform: perspective(400px) translateZ(150px) rotateY(-170deg) scale(1);
     -ms-transform: perspective(400px) translateZ(150px) rotateY(-170deg) scale(1);
@@ -1659,7 +2094,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
     -ms-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(.95);
@@ -1667,7 +2105,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(1);
     -ms-transform: perspective(400px) translateZ(0) rotateY(0deg) scale(1);
@@ -1691,17 +2132,26 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateX(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: perspective(400px) rotateX(-10deg);
     transform: perspective(400px) rotateX(-10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   70% {
     -webkit-transform: perspective(400px) rotateX(10deg);
     transform: perspective(400px) rotateX(10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateX(0deg);
     transform: perspective(400px) rotateX(0deg);
@@ -1716,19 +2166,28 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateX(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: perspective(400px) rotateX(-10deg);
     -ms-transform: perspective(400px) rotateX(-10deg);
     transform: perspective(400px) rotateX(-10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   70% {
     -webkit-transform: perspective(400px) rotateX(10deg);
     -ms-transform: perspective(400px) rotateX(10deg);
     transform: perspective(400px) rotateX(10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateX(0deg);
     -ms-transform: perspective(400px) rotateX(0deg);
@@ -1751,17 +2210,26 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateY(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: perspective(400px) rotateY(-10deg);
     transform: perspective(400px) rotateY(-10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   70% {
     -webkit-transform: perspective(400px) rotateY(10deg);
     transform: perspective(400px) rotateY(10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateY(0deg);
     transform: perspective(400px) rotateY(0deg);
@@ -1776,19 +2244,28 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateY(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: perspective(400px) rotateY(-10deg);
     -ms-transform: perspective(400px) rotateY(-10deg);
     transform: perspective(400px) rotateY(-10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   70% {
     -webkit-transform: perspective(400px) rotateY(10deg);
     -ms-transform: perspective(400px) rotateY(10deg);
     transform: perspective(400px) rotateY(10deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateY(0deg);
     -ms-transform: perspective(400px) rotateY(0deg);
@@ -1811,7 +2288,10 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateX(0deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateX(90deg);
     transform: perspective(400px) rotateX(90deg);
@@ -1826,7 +2306,10 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateX(0deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateX(90deg);
     -ms-transform: perspective(400px) rotateX(90deg);
@@ -1849,7 +2332,10 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateY(0deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateY(90deg);
     transform: perspective(400px) rotateY(90deg);
@@ -1864,7 +2350,10 @@ Copyright (c) 2013 Daniel Eden
     transform: perspective(400px) rotateY(0deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: perspective(400px) rotateY(90deg);
     -ms-transform: perspective(400px) rotateY(90deg);
@@ -1887,19 +2376,28 @@ Copyright (c) 2013 Daniel Eden
     transform: translateX(100%) skewX(-30deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: translateX(-20%) skewX(30deg);
     transform: translateX(-20%) skewX(30deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateX(0%) skewX(-15deg);
     transform: translateX(0%) skewX(-15deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0%) skewX(0deg);
     transform: translateX(0%) skewX(0deg);
@@ -1914,21 +2412,30 @@ Copyright (c) 2013 Daniel Eden
     transform: translateX(100%) skewX(-30deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     -webkit-transform: translateX(-20%) skewX(30deg);
     -ms-transform: translateX(-20%) skewX(30deg);
     transform: translateX(-20%) skewX(30deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: translateX(0%) skewX(-15deg);
     -ms-transform: translateX(0%) skewX(-15deg);
     transform: translateX(0%) skewX(-15deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0%) skewX(0deg);
     -ms-transform: translateX(0%) skewX(0deg);
@@ -1950,7 +2457,10 @@ Copyright (c) 2013 Daniel Eden
     transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(100%) skewX(-30deg);
     transform: translateX(100%) skewX(-30deg);
@@ -1965,7 +2475,10 @@ Copyright (c) 2013 Daniel Eden
     transform: translateX(0%) skewX(0deg);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(100%) skewX(-30deg);
     -ms-transform: translateX(100%) skewX(-30deg);
@@ -1989,7 +2502,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(-200deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: center center;
     transform-origin: center center;
@@ -2009,7 +2525,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(-200deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -2034,7 +2553,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(-90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     transform-origin: left bottom;
@@ -2054,7 +2576,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(-90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
@@ -2079,7 +2604,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     transform-origin: right bottom;
@@ -2099,7 +2627,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
@@ -2124,7 +2655,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     transform-origin: left bottom;
@@ -2144,7 +2678,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
@@ -2169,7 +2706,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(-90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     transform-origin: right bottom;
@@ -2189,7 +2729,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(-90deg);
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
@@ -2214,7 +2757,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: center center;
     transform-origin: center center;
@@ -2234,7 +2780,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -2259,7 +2808,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     transform-origin: left bottom;
@@ -2279,7 +2831,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
@@ -2304,7 +2859,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     transform-origin: right bottom;
@@ -2324,7 +2882,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
@@ -2349,7 +2910,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     transform-origin: left bottom;
@@ -2369,7 +2933,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
@@ -2394,7 +2961,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     transform-origin: right bottom;
@@ -2414,7 +2984,10 @@ Copyright (c) 2013 Daniel Eden
     transform: rotate(0);
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
@@ -2437,7 +3010,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -2451,7 +3027,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -2470,7 +3049,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(-2000px);
     transform: translateX(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -2484,7 +3066,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(-2000px);
     transform: translateX(-2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -2503,7 +3088,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(2000px);
     transform: translateX(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -2517,7 +3105,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(2000px);
     transform: translateX(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -2535,7 +3126,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -2549,7 +3143,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -2568,7 +3165,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -2582,7 +3182,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -2601,7 +3204,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
@@ -2615,7 +3221,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
@@ -2635,7 +3244,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(2000px);
     transform: translateY(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -2650,7 +3262,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(2000px);
     transform: translateY(2000px);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -2669,7 +3284,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
@@ -2683,7 +3301,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
@@ -2706,7 +3327,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20%, 60% {
     -webkit-transform: rotate(80deg);
     transform: rotate(80deg);
@@ -2715,7 +3339,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: rotate(60deg);
     transform: rotate(60deg);
@@ -2724,7 +3351,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: rotate(60deg) translateY(0);
     transform: rotate(60deg) translateY(0);
@@ -2734,7 +3364,10 @@ Copyright (c) 2013 Daniel Eden
     animation-timing-function: ease-in-out;
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(700px);
     transform: translateY(700px);
@@ -2753,7 +3386,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   20%, 60% {
     -webkit-transform: rotate(80deg);
     -ms-transform: rotate(80deg);
@@ -2764,7 +3400,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   40% {
     -webkit-transform: rotate(60deg);
     -ms-transform: rotate(60deg);
@@ -2775,7 +3414,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   80% {
     -webkit-transform: rotate(60deg) translateY(0);
     -ms-transform: rotate(60deg) translateY(0);
@@ -2787,7 +3429,10 @@ Copyright (c) 2013 Daniel Eden
     animation-timing-function: ease-in-out;
     opacity: 1;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     -webkit-transform: translateY(700px);
     -ms-transform: translateY(700px);
@@ -2809,7 +3454,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(-100%) rotate(-120deg);
     transform: translateX(-100%) rotate(-120deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0px) rotate(0deg);
@@ -2824,7 +3472,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(-100%) rotate(-120deg);
     transform: translateX(-100%) rotate(-120deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 1;
     -webkit-transform: translateX(0px) rotate(0deg);
@@ -2846,7 +3497,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: translateX(0px) rotate(0deg);
     transform: translateX(0px) rotate(0deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(100%) rotate(120deg);
@@ -2861,7 +3515,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: translateX(0px) rotate(0deg);
     transform: translateX(0px) rotate(0deg);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: translateX(100%) rotate(120deg);
@@ -2881,7 +3538,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(.3);
     transform: scale(.3);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 1;
   }
@@ -2894,7 +3554,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(.3);
     transform: scale(.3);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 1;
   }
@@ -2913,7 +3576,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateY(60px);
@@ -2932,7 +3598,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateY(60px);
@@ -2956,7 +3625,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateX(48px);
@@ -2975,7 +3647,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateX(48px);
@@ -2999,7 +3674,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateX(-48px);
@@ -3018,7 +3696,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateX(-48px);
@@ -3042,7 +3723,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateY(-60px);
@@ -3061,7 +3745,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   60% {
     opacity: 1;
     -webkit-transform: scale(.475) translateY(-60px);
@@ -3083,13 +3770,19 @@ Copyright (c) 2013 Daniel Eden
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 0;
     -webkit-transform: scale(.3);
     transform: scale(.3);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
   }
@@ -3102,14 +3795,20 @@ Copyright (c) 2013 Daniel Eden
     -ms-transform: scale(1);
     transform: scale(1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   50% {
     opacity: 0;
     -webkit-transform: scale(.3);
     -ms-transform: scale(.3);
     transform: scale(.3);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
   }
@@ -3128,7 +3827,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateY(2000px);
@@ -3147,7 +3849,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateY(2000px);
@@ -3172,7 +3877,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateX(-2000px);
@@ -3191,7 +3899,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateX(-2000px);
@@ -3216,7 +3927,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateX(2000px);
@@ -3235,7 +3949,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateX(2000px);
@@ -3260,7 +3977,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateY(-2000px);
@@ -3279,7 +3999,10 @@ Copyright (c) 2013 Daniel Eden
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   100% {
     opacity: 0;
     -webkit-transform: scale(.1) translateY(-2000px);
