@@ -1,7 +1,10 @@
+<?php
+  session_start();
+  include('registration.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Register</title>
+<title>Food4All - Register</title>
 <link rel="icon" href="images/Icon.ico" type="image/x-icon">
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -61,15 +64,23 @@
 					<h3>PERSONAL INFORMATION</h3>
 					 <div class="wow fadeInLeft" data-wow-delay="0.4s">
 						<span>First Name<label>*</label></span>
-						<input type="text">
+						<input type="text" name="firstName">
 					 </div>
 					 <div class="wow fadeInRight" data-wow-delay="0.4s">
 						<span>Last Name<label>*</label></span>
-						<input type="text">
+						<input type="text" name="lastName">
+					 </div>
+					 <div class="wow fadeInRight" data-wow-delay="0.4s">
+						<span>User Name<label>*</label></span>
+						<input type="text" name="username">
+					 </div>
+					 <div class="wow fadeInRight" data-wow-delay="0.4s">
+						 <span>Contact Number<label>*</label></span>
+						 <input type="text" name="contactNumber">
 					 </div>
 					 <div class="wow fadeInRight" data-wow-delay="0.4s">
 						 <span>Email Address<label>*</label></span>
-						 <input type="text">
+						 <input type="email" name="email">
 					 </div>
 					 <div class="clearfix"> </div>
 					   <a class="news-letter" href="#">
@@ -79,11 +90,11 @@
 						    <h3>LOGIN INFORMATION</h3>
 							 <div class="wow fadeInLeft" data-wow-delay="0.4s">
 								<span>Password<label>*</label></span>
-								<input type="text">
+								<input type="password" name="password">
 							 </div>
 							 <div class="wow fadeInRight" data-wow-delay="0.4s">
 								<span>Confirm Password<label>*</label></span>
-								<input type="text">
+								<input type="password" name="cpassword">
 							 </div>
 					 </div>
 				</form>
@@ -105,19 +116,19 @@
 						<h4>Site Links</h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">About Us</a></li>
+							<li class="data"><a href="aboutUs.html">About Us</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Contact Us</a></li>
+							<li class="data"><a href="contact.html">Contact Us</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Privacy Policy</a></li>
+							<li class="data"><a href="privacyPolicy.html">Privacy Policy</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Terms of Use</a></li>
+							<li class="data"><a href="terms.html">Terms of Use</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
