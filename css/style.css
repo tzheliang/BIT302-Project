@@ -4118,31 +4118,4 @@ a.morebtn {
   float: left;
   width: 69%;
 }
-
-.btn-about-layout {
-            width: 50%;
-            max-width: 530px;
-            font-size: 28px;
-            display: block;
-            margin: 30px auto;
-            line-height: 56px;
-            height: 56px;
-            background: #20ac76;
-            color: #FFFFFF;
-            border-radius: 5px;
-            transition: all .3s ease-out;
-            -moz-transition: all .3s ease-out;
-            -webkit-transition: all .3s ease-out;
-            text-decoration: none;
-        }
-
-				.btn-about-layout:hover {
-				            background: #1c9667;
-				            color: #FFFFFF !important;
-				            transition: all .3s ease-out;
-				            -moz-transition: all .3s ease-out;
-				            -webkit-transition: all .3s ease-out;
-				            text-decoration: none;
-				        }
-
 }
