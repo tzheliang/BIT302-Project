@@ -321,11 +321,11 @@ a.simpleCart_empty {
 	font-size: 2.1em;
 	font-weight: 700;
 }
-.popular-restaurents{
+.popular-restaurants{
 	padding:4em 0;
 	background: #fff;
 }
-.top-restaurents{
+.top-restaurants{
 	padding:0;
 }
 .res-img-1 {
@@ -2620,16 +2620,16 @@ a.morebtn{
 		width: 76%;
 		margin-bottom: 0.5em;
 	}
-	.top-restaurents {
+	.top-restaurants {
 		width: 100%;
 	}
 	.top-cuisines {
 		width: 100%;
 	}
-	.popular-restaurents {
+	.popular-restaurants {
 		padding: 3em 0;
 	}
-	.top-restaurents {
+	.top-restaurants {
 		margin-bottom: 3em;
 	}
 	.top-cuisine-grid label {
@@ -2920,7 +2920,7 @@ a.morebtn{
 		background: url(../images/dotted-line-right.png) no-repeat 182px 13px;
 		margin: 0 0 1.5em 0;
 	}
-	.popular-restaurents {
+	.popular-restaurants {
 		padding: 2em 0 2.5em 0;
 	}
 	.top-cuisine-head h3 {
@@ -3330,7 +3330,7 @@ a.morebtn{
 		width: 32.333%;
 		margin: 0 1% 0% 0;
 	}
-	.top-restaurents {
+	.top-restaurants {
 		margin-bottom: 2em;
 	}
 	.top-cuisine-grid label {
@@ -3910,7 +3910,7 @@ a.morebtn{
 	.top-cuisine-head h3 {
 		font-size: 1.4em;
 	}
-	.top-restaurents {
+	.top-restaurants {
 		margin-bottom: 1em;
 	}
 	.top-restaurent-head {
