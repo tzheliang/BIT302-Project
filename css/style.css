@@ -315,17 +315,29 @@ a.simpleCart_empty {
 	background:#F1F1F1;
 	padding:2em 0;
 }
+<<<<<<< HEAD
+.top-restaurent-head h3{
+=======
 .top-restaurant-head h3{
+>>>>>>> master
 	color: #515151;
 	font-family: 'Lobster Two', cursive;
 	font-size: 2.1em;
 	font-weight: 700;
 }
+<<<<<<< HEAD
+.popular-restaurents{
+	padding:4em 0;
+	background: #fff;
+}
+.top-restaurents{
+=======
 .popular-restaurants{
 	padding:4em 0;
 	background: #fff;
 }
 .top-restaurants{
+>>>>>>> master
 	padding:0;
 }
 .res-img-1 {
@@ -337,7 +349,11 @@ a.simpleCart_empty {
 	margin-bottom:1.7em;
 	float: left;
 }
+<<<<<<< HEAD
+.top-restaurent-head {
+=======
 .top-restaurant-head {
+>>>>>>> master
 	background: url(../images/dotted-line-right.png) no-repeat 240px 18px;
 	margin: 0 0 3em 0;
 }
@@ -2317,11 +2333,19 @@ address {
 .order-form-grid input[type="button"]:hover{
 	background:#E24425;
 }
+<<<<<<< HEAD
+/*-- popular-restaurent--*/
+.Popular-Restaurants-content{
+	padding:3em 0;
+}
+.restaurent-title h4{
+=======
 /*-- popular-restaurant--*/
 .Popular-Restaurants-content{
 	padding:3em 0;
 }
 .restaurant-title h4{
+>>>>>>> master
 	color:#000000;
 	font-size:2em;
 	font-weight:500;
@@ -2337,11 +2361,19 @@ address {
 	text-align:right;
 	margin-top: 0.8em;
 }
+<<<<<<< HEAD
+.restaurent-title a {
+		color: #000000;
+		text-decoration: none;
+	}
+.restaurent-title a:hover{
+=======
 .restaurant-title a {
 		color: #000000;
 		text-decoration: none;
 	}
 .restaurant-title a:hover{
+>>>>>>> master
 	color:#5BBD50;
 }
 .buy span{
@@ -2620,16 +2652,27 @@ a.morebtn{
 		width: 76%;
 		margin-bottom: 0.5em;
 	}
+<<<<<<< HEAD
+	.top-restaurents {
+=======
 	.top-restaurants {
+>>>>>>> master
 		width: 100%;
 	}
 	.top-cuisines {
 		width: 100%;
 	}
+<<<<<<< HEAD
+	.popular-restaurents {
+		padding: 3em 0;
+	}
+	.top-restaurents {
+=======
 	.popular-restaurants {
 		padding: 3em 0;
 	}
 	.top-restaurants {
+>>>>>>> master
 		margin-bottom: 3em;
 	}
 	.top-cuisine-grid label {
@@ -2642,11 +2685,19 @@ a.morebtn{
 	.top-cuisine-head h3 {
 		font-size: 1.8em;
 	}
+<<<<<<< HEAD
+	.top-restaurent-head {
+		background: url(../images/dotted-line-right.png) no-repeat 219px 18px;
+		margin: 0 0 2em 0;
+	}
+	.top-restaurent-head h3 {
+=======
 	.top-restaurant-head {
 		background: url(../images/dotted-line-right.png) no-repeat 219px 18px;
 		margin: 0 0 2em 0;
 	}
 	.top-restaurant-head h3 {
+>>>>>>> master
 		font-size: 1.8em;
 	}
 	.ordering-section {
@@ -2913,6 +2964,16 @@ a.morebtn{
 		left: 24em;
 		bottom: -153px;
 	}
+<<<<<<< HEAD
+	.top-restaurent-head h3 {
+		font-size: 1.6em;
+	}
+	.top-restaurent-head {
+		background: url(../images/dotted-line-right.png) no-repeat 182px 13px;
+		margin: 0 0 1.5em 0;
+	}
+	.popular-restaurents {
+=======
 	.top-restaurant-head h3 {
 		font-size: 1.6em;
 	}
@@ -2921,6 +2982,7 @@ a.morebtn{
 		margin: 0 0 1.5em 0;
 	}
 	.popular-restaurants {
+>>>>>>> master
 		padding: 2em 0 2.5em 0;
 	}
 	.top-cuisine-head h3 {
@@ -3063,11 +3125,19 @@ a.morebtn{
 	.contact_top {
 		padding: 2em 0 1em 0;
 	}
+<<<<<<< HEAD
+	.restaurent-logo {
+		width: 25%;
+		float: left;
+	}
+	.col-md-2.restaurent-title {
+=======
 	.restaurant-logo {
 		width: 25%;
 		float: left;
 	}
 	.col-md-2.restaurant-title {
+>>>>>>> master
 		width: 16.666%;
 		float: left;
 		padding:0;
@@ -3076,7 +3146,11 @@ a.morebtn{
 		width: 84%;
 		margin-bottom: 0.2em;
 	}
+<<<<<<< HEAD
+	.restaurent-title h4 {
+=======
 	.restaurant-title h4 {
+>>>>>>> master
 		font-size: 1.4em;
 		margin: -1px 0 5px 0;
 	}
@@ -3330,7 +3404,11 @@ a.morebtn{
 		width: 32.333%;
 		margin: 0 1% 0% 0;
 	}
+<<<<<<< HEAD
+	.top-restaurents {
+=======
 	.top-restaurants {
+>>>>>>> master
 		margin-bottom: 2em;
 	}
 	.top-cuisine-grid label {
@@ -3408,7 +3486,11 @@ a.morebtn{
 	.buy {
 		width: 47%;
 	}
+<<<<<<< HEAD
+	.restaurent-logo {
+=======
 	.restaurant-logo {
+>>>>>>> master
 		width: 34%;
 	}
 	.logo-title {
@@ -3420,7 +3502,11 @@ a.morebtn{
 	.logo-title-4 {
 		width: 100%;
 	}
+<<<<<<< HEAD
+	.restaurent-title h4 {
+=======
 	.restaurant-title h4 {
+>>>>>>> master
 		font-size: 1.2em;
 	}
 	.Popular-Restaurants-grid {
@@ -3673,6 +3759,15 @@ a.morebtn{
 		padding-bottom: 1.2em;
 		margin-bottom: 1.7em;
 	}
+<<<<<<< HEAD
+	.restaurent-logo {
+		width: 41%;
+	}
+	.col-md-2.restaurent-title {
+		width: 22.666%;
+	}
+	.restaurent-title h4 {
+=======
 	.restaurant-logo {
 		width: 41%;
 	}
@@ -3680,6 +3775,7 @@ a.morebtn{
 		width: 22.666%;
 	}
 	.restaurant-title h4 {
+>>>>>>> master
 		font-size: 1.1em;
 	}
 	.rating span {
@@ -3904,16 +4000,27 @@ a.morebtn{
 		margin: 0 0 1.5em 0;
 		background: url(../images/dotted-line-right-wide.png) no-repeat 130px 12px;
 	}
+<<<<<<< HEAD
+	.top-restaurent-head h3 {
+=======
 	.top-restaurant-head h3 {
+>>>>>>> master
 		font-size: 1.35em;
 	}
 	.top-cuisine-head h3 {
 		font-size: 1.4em;
 	}
+<<<<<<< HEAD
+	.top-restaurents {
+		margin-bottom: 1em;
+	}
+	.top-restaurent-head {
+=======
 	.top-restaurants {
 		margin-bottom: 1em;
 	}
 	.top-restaurant-head {
+>>>>>>> master
 		background: url(../images/dotted-line-right.png) no-repeat 140px 11px;
 		margin: 0 0 1.5em 0;
 	}
@@ -4063,15 +4170,26 @@ a.morebtn{
 		padding: 0.4em 1.2em;
 		font-size: 14px;
 	}
+<<<<<<< HEAD
+	.restaurent-logo {
+=======
 	.restaurant-logo {
+>>>>>>> master
 		width: 38%;
 		padding: 0;
 		margin-right: 2%;
 	}
+<<<<<<< HEAD
+	.col-md-2.restaurent-title {
+		width: 26.666%;
+	}
+	.restaurent-title h4 {
+=======
 	.col-md-2.restaurant-title {
 		width: 26.666%;
 	}
 	.restaurant-title h4 {
+>>>>>>> master
 		font-size: 1em;
 		margin: -1px 0 2px 0;
 	}
