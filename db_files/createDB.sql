@@ -25,7 +25,7 @@ CREATE TABLE MenuItem(
   foodID CHAR(5) UNIQUE NOT NULL,
   foodName VARCHAR(30) NOT NULL,
   price DECIMAL(6, 2) NOT NULL,
-  STATUS VARCHAR(20) NOT NULL,
+  status VARCHAR(20) NOT NULL,
   image VARCHAR(40) NOT NULL,
   avgRating INT(1) NOT NULL,
   restaurantID CHAR(5),
