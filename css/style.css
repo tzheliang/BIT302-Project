@@ -725,6 +725,9 @@ li.item-lists {
 .return-restaurant a {
 	padding: 10px;
 }
+.no-item-msg {
+	padding: 25px 10px;
+}
 ul.previous-restaurant{
 	padding:0;
 	list-style:none;
