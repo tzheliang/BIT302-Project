@@ -7,7 +7,7 @@
   $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
   // SQL Query to check for email
-  $sql = "SELECT * FROM CUSTOMER";
+  $sql = "SELECT * FROM Users";
   $result = mysqli_query($con, $sql);
   // Initialising variables
   $passed = true;
@@ -67,7 +67,7 @@
     }
 
     if ($passed){
-      $sql2 = "INSERT INTO CUSTOMER VALUES('$username', '$email', '$pass', '$fname', '$lname', '$mobileNo')";
+      $sql2 = "INSERT INTO Users VALUES('$username', '$email', '$pass', '$fname', '$lname', '$mobileNo')";
       if (mysqli_query($con, $sql2)){
         header("location: login.html");
       }
