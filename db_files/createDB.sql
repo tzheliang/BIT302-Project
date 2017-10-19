@@ -15,7 +15,7 @@ CREATE TABLE Restaurant(
   location VARCHAR(20) NOT NULL,
   phoneNumber VARCHAR(15) NOT NULL,
   email VARCHAR(30) NOT NULL,
-  image VARCHAR(40) NOT NULL,
+  image VARCHAR(100) NOT NULL,
   ownerID CHAR(5),
   PRIMARY KEY(restaurantID),
   FOREIGN KEY(ownerID) REFERENCES Users(userID)
@@ -26,7 +26,7 @@ CREATE TABLE MenuItem(
   foodName VARCHAR(30) NOT NULL,
   price DECIMAL(6, 2) NOT NULL,
   status VARCHAR(20) NOT NULL,
-  image VARCHAR(40) NOT NULL,
+  image VARCHAR(100) NOT NULL,
   avgRating INT(1) NOT NULL,
   restaurantID CHAR(5),
   PRIMARY KEY(foodID),
