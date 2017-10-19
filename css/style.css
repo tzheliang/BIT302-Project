@@ -722,6 +722,9 @@ li.item-lists {
 	padding:0;
 	margin: 1em 0;
 }
+.return-restaurant a {
+	padding: 10px;
+}
 ul.previous-restaurant{
 	padding:0;
 	list-style:none;
@@ -774,6 +777,9 @@ a.cart-btn {
 }
 a.cart-btn:hover {
  background:#E24425;
+}
+h3.restaurant-title {
+	padding: 10px;
 }
 /*-- orders-list --*/
 /*-- cart-page --*/
