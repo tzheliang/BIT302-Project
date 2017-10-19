@@ -4,7 +4,7 @@
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "food4all_register";
+  $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
   // SQL Query to check for email
   $sql = "SELECT * FROM CUSTOMER";
@@ -15,7 +15,7 @@
   if (isset($_POST['submit'])){
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $pass = $_POST['password'];
+    $pass = $_POST['PASSWORD'];
     $cpass = $_POST['cpassword'];
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
@@ -69,7 +69,7 @@
     if ($passed){
       $sql2 = "INSERT INTO CUSTOMER VALUES('$username', '$email', '$pass', '$fname', '$lname', '$mobileNo')";
       if (mysqli_query($con, $sql2)){
-        header("location: login.php");
+        header("location: login.html");
       }
     }
   }
