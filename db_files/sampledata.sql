@@ -252,3 +252,13 @@ VALUES(
 
 INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
 VALUES ("F0001", "Pepperoni Pizza", "9.99", "Available", "./images/pizza_hut/pepperoni-pizza.png", 0, "R0001");
+INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
+VALUES ("F0002", "Supreme Pizza", "15.99", "Available", "./images/pizza_hut/supreme-pizza.png", 0, "R0001");
+INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
+VALUES ("F0003", "Primo Meat Pizza", "15.99", "Available", "./images/pizza_hut/primo-meat-pizza.png", 0, "R0001");
+INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
+VALUES ("F0004", "Cheese Pizza", "9.99", "Available", "./images/pizza_hut/cheese-pizza.png", 0, "R0001");
+INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
+VALUES ("F0005", "Meat Lover Pizza", "15.99", "Available", "./images/pizza_hut/meat-lover-pizza.png", 0, "R0001");
+INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
+VALUES ("F0006", "Bacon Spinach Alfredo Pizza", "15.99", "Available", "./images/pizza_hut/bacon-spinach-alfredo-pizza.png", 0, "R0001");
