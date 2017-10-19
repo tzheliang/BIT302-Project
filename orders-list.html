@@ -1,6 +1,4 @@
-<?php
-	session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -100,380 +98,46 @@
 		<div class="container">
 			<div class="col-md-12 return-restaurant">
 				<ul class='previous-restaurant'>
-					<li><a href="popular-restaurants.html">Return to Restaurant list</a></li>
+					<li class="return-restaurant"><a href="popular-restaurants.html">Return to Restaurant list</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
 			<?php
-				$result = $_SESSION['abc'];
-				echo "<h1>".$result."</h1>";
+			  if (!isset($_SESSION['arr'])) {
+			    echo "<h2>No menu data was found.</h2>";
+			  } else {
+					echo "<h3 class='restaurant-title'>Menu For ".$_SESSION['restaurantName']."</h3>";
+			    $menuList = $_SESSION['arr'];
+			    $length = count($menuList);
+			    $j = 0;
+			    for ($i = 0; $i < $length; $i+=2) {
+			      echo "<div class='order-top wow fadeInDown'>";
+			      for ($j; $j < min($i+2, $length) ; $j++) {
+			        echo "
+			          <li class='item-lists'>
+			            <div class='food-item'>
+			              <div class='food-description'>
+			                <h4>".$menuList[$j]['foodName']."</h4>
+			              </div>
+			              <div class='food-item-container'>
+			                <div class='food-image'>
+			                  <img class='img-responsive' src=".$menuList[$j]['image']." alt=''/>
+			                </div>
+			                <div class='food-price'>
+			                  <p>Price : RM25.00</p>
+			                  <p>Status : Available</p>
+			                  <p>Ratings: 4/5 (5)</p>
+			                  <a class='cart-btn' href='#'>Add to Cart</a>
+			                </div>
+			              </div>
+			            </div>
+			          </li>";
+			      }
+			      echo "<div class='clearfix'></div>";
+			      echo "</div>";
+			    }
+			  }
 			?>
-			<div class="order-top wow fadeInDown">
-				<li class="item-lists">
-					<div class="food-item">
-						<div class="food-description">
-							<h4>Pepperoni Pizza</h4>
-						</div>
-						<div class="food-item-container">
-							<div class="food-image">
-								<img class=" img-responsive" src="./images/pizza_hut/pepperoni-pizza.png" alt=""/>
-							</div>
-							<div class="food-price">
-								<p>Price : RM25.00</p>
-								<p>Status : Available</p>
-								<p>Ratings: 4/5 (5)</p>
-								<a class='cart-btn' href="#">Add to Cart</a>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</li>
-				<li class="item-lists">
-					<div class="food-item">
-						<div class="food-description">
-							<h4>Pepperoni Pizza</h4>
-						</div>
-						<div class="food-item-container">
-							<div class="food-image">
-								<img class=" img-responsive" src="./images/pizza_hut/pepperoni-pizza.png" alt=""/>
-							</div>
-							<div class="food-price">
-								<p>Price : RM25.00</p>
-								<p>Status : Available</p>
-								<p>Ratings: 4/5 (5)</p>
-								<a class='cart-btn' href="#">Add to Cart</a>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</li>
-				<div class="clearfix"></div>
-			</div>
-			<!-- <div class="order-top">
-				<li class="item-lists">
-					<h4>Pizzas</h4>
-					<p>Exotic Combo of Cheese &amp; Basil</p>
-					<P> Capsicum, Tomatoes, Onion</P>
-					<P> Chicken Tikka &amp; Cheese</P>
-					<P> Chicken Stripse</P>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</li>
-				<div class="clearfix"></div>
-			</div>
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Burgers</h4>
-					<p>Vegetable Patty With Coleslaw</p>
-					<p>Fajita Paneer &amp; Vegetable</p>
-					<p>Chicken Patty With Vegetable</p>
-					<p>Chicken Cut in Mexican Style</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</li>
-				<div class="clearfix"></div>
-			</div>
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Hot Dogs</h4>
-					<p>Mixed Vegetable With Cheese</p>
-					<p>Grilled Paneer &amp; Vegetable</p>
-					<p>Chicken Sausage With Mustard</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-					</div>
-				</li>
-				<div class="clearfix"></div>
-			</div>
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Desserts</h4>
-					<p>(Black Forest/Truffle/Noughat)</p>
-					<p>Apple Pie With Ice Cream</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-					</div>
-				</li>
-				<div class="clearfix"></div>
-			</div>
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Cold Beverages</h4>
-					<p>Strawberry Milk Shake</p>
-					<p>Chocolate Milk Shake</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">Pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-					</div>
-				</li>
-				<div class="clearfix"></div>
-			</div>
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Sandwiches</h4>
-					<p>(Mint With Cheese Tomato)</p>
-					<p>(Fresh Tomatoes, Cucumber)</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-					</div>
-				</li>
-
-				<div class="clearfix"></div>
-			</div>
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Exotic Cakes</h4>
-					<p>Pineapple Flavoured Cream)</p>
-					<p>A Chocolate Sponge Base</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</li>
-
-				<div class="clearfix"></div>
-			</div><br />
-			<div class="order-top">
-				<li class="item-lists">
-					<h4>Ice Creams</h4>
-					<p>Butter Scotch</p>
-					<p>Pineapple</p>
-					<p>Black Forest</p>
-					<p>Chocolate with Orange</p>
-				</li>
-				<li class="item-lists">
-					<div class="special-info grid_1 simpleCart_shelfItem">
-						<h4>Price</h4>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="pre-top">
-							<div class="pr-left">
-								<div class="item_add"><span class="item_price"><h6>ONLY $30.00</h6></span></div>
-							</div>
-							<div class="pr-right">
-								<div class="item_add"><span class="item_price"><a href="#">pick</a></span></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</li>
-
-				<div class="clearfix"></div>
-			</div> -->
 		</div>
 	</div>
 	<div class="contact-section" id="contact">
