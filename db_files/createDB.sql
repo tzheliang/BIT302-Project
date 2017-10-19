@@ -5,7 +5,7 @@ CREATE TABLE Users(
   firstName VARCHAR(20) NOT NULL,
   lastName VARCHAR(20) NOT NULL,
   email VARCHAR(30) NOT NULL,
-  address VARCHAR(50),
+  contactNumber VARCHAR(15) NOT NULL,
   PRIMARY KEY(userID)
 );
 

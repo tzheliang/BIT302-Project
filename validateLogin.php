@@ -4,13 +4,13 @@
   $servername = "localhost";
   $name = "root";
   $password = "";
-  $dbname = "food4all_register";
+  $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
 
   if (isset($_POST['submit'])){
     $loginUsername = $_POST['email'];
-    $loginPass = $_POST['password'];
-    $sql = "SELECT * FROM CUSTOMER where email = '$loginUsername' AND password = '$loginPass'";
+    $loginPass = $_POST['PASSWORD'];
+    $sql = "SELECT * FROM Users where email = '$loginUsername' AND PASSWORD = '$loginPass'";
     $result = mysqli_query($con, $sql);
     $rows = mysqli_num_rows($result);
     if ($rows == 1){
