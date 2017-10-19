@@ -7,7 +7,7 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `address`
+    `contactNumber`
   )
 VALUES(
   'U0001',
@@ -16,7 +16,7 @@ VALUES(
   'pizza',
   'hut',
   'pizzahutmy@mail.com',
-  NULL
+  '012-5201314'
 );
 
 INSERT
@@ -28,7 +28,7 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `address`
+    `contactNumber`
   )
 VALUES(
   'U0002',
@@ -37,7 +37,7 @@ VALUES(
   'sub',
   'way',
   'subway@mail.com',
-  NULL
+  '012-3456789'
 );
 
 INSERT
@@ -49,7 +49,7 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `address`
+    `contactNumber`
   )
 VALUES(
   'U0003',
@@ -58,7 +58,7 @@ VALUES(
   'bar',
   'ista',
   'barista@mail.com',
-  NULL
+  '019-9999999'
 );
 
 INSERT
@@ -70,7 +70,7 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `address`
+    `contactNumber`
   )
 VALUES(
   'U0004',
@@ -79,7 +79,7 @@ VALUES(
   'Papa',
   'Johns',
   'papajohns@mail.com',
-  NULL
+  '013-5791113'
 );
 
 INSERT
@@ -91,7 +91,7 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `address`
+    `contactNumber`
   )
 VALUES(
   'U0005',
@@ -100,7 +100,7 @@ VALUES(
   'Dominos',
   'Pizza',
   'dominos@mail.com',
-  NULL
+  '012-4681012'
 );
 
 INSERT
@@ -112,7 +112,7 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `address`
+    `contactNumber`
   )
 VALUES(
   'U0006',
@@ -121,7 +121,7 @@ VALUES(
   'Kentucky',
   'Fried Chicken',
   'kfc@mail.com',
-  NULL
+  '011-1111111'
 );
 
 INSERT
