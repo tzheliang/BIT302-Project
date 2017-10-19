@@ -110,7 +110,7 @@
 			    $menuList = $_SESSION['arr'];
 			    $length = count($menuList);
 					if ($length <= 0) {
-						echo "<h2>No menu items are registered on Food4All. Check back later.</h2>";
+						echo "<h2 class='no-item-msg'>No menu items are registered on Food4All. Check back later.</h2>";
 					} else {
 						$j = 0;
 						for ($i = 0; $i < $length; $i+=2) {
@@ -174,7 +174,7 @@
 	<!-- footer-section-starts -->
 	<div class="footer">
 		<div class="container">
-			<p class="wow fadeInLeft" data-wow-delay="0.4s">&copy; 2014 All rights Reserved | Template by &nbsp;<a href="http://w3layouts.com" target="target_blank">W3Layouts</a></p>
+			<p class="wow fadeInLeft" data-wow-delay="0.4s">&copy; 2014 All rights Reserved | Food4All</p>
 		</div>
 	</div>
 	<!-- footer-section-ends -->
