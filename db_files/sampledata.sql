@@ -249,3 +249,6 @@ VALUES(
   './images/kfc/main-logo.jpg',
   'U0006'
 );
+
+INSERT INTO menuitem (foodID, foodName, price, status, image, avgRating, restaurantID)
+VALUES ("F0001", "Pepperoni Pizza", "9.99", "Available", "./images/pizza_hut/pepperoni-pizza.png", 0, "R0001");

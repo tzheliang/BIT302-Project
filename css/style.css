@@ -732,7 +732,49 @@ ul.previous-restaurant li a{
 	color:#999;
 	font-size:1.2em;
 }
-
+.food-description h4 {
+	padding: 10px;
+	margin: 0;
+}
+.food-image {
+	padding: 0 10px;
+	width: 180px;
+	float:left;
+}
+.food-price p {
+  color: #6b6969;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.8em;
+  margin: 0.6em 0;
+}
+.food-price {
+	float: left;
+	flex-grow: 1;
+	padding: 10px 10px;
+}
+.food-item-container {
+	display: flex;
+	flex-direction: row;
+}
+a.cart-btn {
+	float: right;
+  border: none;
+  outline: none;
+  padding: 0.3em 1.6em;
+  color: #fff;
+  background: #5BBD50;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-decoration: none;
+}
+a.cart-btn:hover {
+ background:#E24425;
+}
 /*-- orders-list --*/
 /*-- cart-page --*/
 .cart-items {
@@ -2366,24 +2408,24 @@ address {
 	margin: 0 0.9em 0.3em 0;
 	font-family: 'Lobster Two', cursive;
 }
-a.morebtn{
-  border: none;
-  outline: none;
-  padding: 0.3em 1.6em;
-  color: #fff;
-  background: #5BBD50;
-  font-size: 1.4em;
-  font-weight: 700;
-  font-family: 'Lobster Two', cursive;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -o-border-radius: 20px;
-  text-decoration:none;
- }
- a.morebtn:hover {
-	background:#E24425;
- }
+ button.morebtn{
+   border: none;
+   outline: none;
+   padding: 0.3em 1.6em;
+   color: #fff;
+   background: #5BBD50;
+   font-size: 1.4em;
+   font-weight: 700;
+   font-family: 'Lobster Two', cursive;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -o-border-radius: 20px;
+   text-decoration:none;
+  }
+  button.morebtn:hover {
+ 	background:#E24425;
+  }
 .buy input[type="button"]{
 	border:none;
 	outline:none;

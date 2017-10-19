@@ -7,5 +7,7 @@
 
   $sql = "SELECT * FROM Restaurant";
   $result = mysqli_query($con, $sql);
-  $_SESSION['result'] = $result;
+  $_SESSION['restaurant'] = $result;
+
+  mysqli_close($con);
 ?>

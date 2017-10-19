@@ -100,12 +100,13 @@
 	<div class="Popular-Restaurants-content">
 		<div class="Popular-Restaurants-grids">
 			<div class="container">
+				<form action="retrieveMenu.php" method='post'>
 				<?php
-				$result = $_SESSION['result'];
+				$result = $_SESSION['restaurant'];
 				if (mysqli_num_rows($result) < 1){
 					echo "<h1>No restaurants are currently registered.</h1>";
 				} else {
-					while ($row = mysqli_fetch_assoc($_SESSION['result'])){
+					while ($row = mysqli_fetch_assoc($result)){
 						echo "
 						<div class='Popular-Restaurants-grid wow fadeInRight' data-wow-delay='0.4s'>
 							<div class='col-md-3 restaurant-logo'>
@@ -122,12 +123,13 @@
 								</div>
 							</div>
 							<div class='col-md-5 buy'>
-								<a class='morebtn hvr-rectangle-in' href='orders-list.html'>Browse Menu</a>
+								<button type='submit' name='submit' value=".$row['restaurantID']." class='morebtn hvr-rectangle-in'>Browse Menu</button>
 							</div>
 							<div class='clearfix'></div>
 						</div>
 						";}
 					}?>
+				</form>
 			</div>
 		</div>
 	</div>
