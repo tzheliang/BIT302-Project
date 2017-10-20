@@ -1,6 +1,5 @@
 <?php
   session_start();
-  include("validateLogin.php");
 ?>
   <!DOCTYPE html>
   <html>
@@ -93,7 +92,7 @@
             <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
               <h3>REGISTERED CUSTOMERS</h3>
               <p>If you have an account with us, please log in.</p>
-              <form>
+              <form action="validateLogin.php" method="post">
                 <div>
                   <span>Email Address<label>*</label></span>
                   <input type="email" name="email">
@@ -102,7 +101,7 @@
                   <span>Password<label>*</label></span>
                   <input type="password" name="PASSWORD">
                 </div>
-                <input type="submit" value="Login">
+                <input type="submit" name="submit" value="Login">
               </form>
             </div>
             <div class="clearfix"> </div>

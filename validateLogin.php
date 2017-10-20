@@ -5,7 +5,7 @@
   $name = "root";
   $password = "";
   $dbname = "food4all";
-  $con = new mysqli($servername, $username, $password, $dbname);
+  $con = new mysqli($servername, $name, $password, $dbname);
 
   if (isset($_POST['submit'])){
     $loginUsername = $_POST['email'];
@@ -14,6 +14,7 @@
     $result = mysqli_query($con, $sql);
     $rows = mysqli_num_rows($result);
     if ($rows == 1){
+      header("location:index.html"); 
       /*if ($loginUsername == 'admin@admin.com'){
         header("location: admin.php");
       } else{
