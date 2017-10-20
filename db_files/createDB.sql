@@ -48,6 +48,7 @@ CREATE TABLE FoodOrder(
 CREATE TABLE OrderItem(
   orderID CHAR(5) NOT NULL,
   foodID CHAR(5) NOT NULL,
+  quantity int(3),
   PRIMARY KEY(orderID, foodID),
   FOREIGN KEY(orderID) REFERENCES FoodOrder(orderID),
   FOREIGN KEY(foodID) REFERENCES MenuItem(foodID)
