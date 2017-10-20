@@ -1,11 +1,12 @@
 CREATE TABLE Users(
-  userID CHAR(5) UNIQUE NOT NULL,
+  userID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
   username VARCHAR(20) NOT NULL,
-  PASSWORD VARCHAR(30) NOT NULL,
+  password VARCHAR(30) NOT NULL,
   firstName VARCHAR(20) NOT NULL,
   lastName VARCHAR(20) NOT NULL,
   email VARCHAR(30) NOT NULL,
   contactNumber VARCHAR(15) NOT NULL,
+  address VARCHAR(30),
   PRIMARY KEY(userID)
 );
 
@@ -16,7 +17,7 @@ CREATE TABLE Restaurant(
   phoneNumber VARCHAR(15) NOT NULL,
   email VARCHAR(30) NOT NULL,
   image VARCHAR(100) NOT NULL,
-  ownerID CHAR(5),
+  ownerID INT(5),
   PRIMARY KEY(restaurantID),
   FOREIGN KEY(ownerID) REFERENCES Users(userID)
 );
@@ -38,8 +39,8 @@ CREATE TABLE FoodOrder(
   TIMESTAMP TIMESTAMP NOT NULL,
   deliveryStatus VARCHAR(20) NOT NULL,
   totalPrice DECIMAL(6, 2) NOT NULL,
-  customerID CHAR(5) NOT NULL,
-  ownerID CHAR(5) NOT NULL,
+  customerID INT(5) NOT NULL,
+  ownerID INT(5) NOT NULL,
   PRIMARY KEY(orderID),
   FOREIGN KEY(customerID) REFERENCES Users(userID),
   FOREIGN KEY(ownerID) REFERENCES Users(userID)
