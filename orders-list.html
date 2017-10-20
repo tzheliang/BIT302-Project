@@ -44,6 +44,35 @@
 	</script>
 	<script src="js/simpleCart.min.js">
 	</script>
+	<script>
+		function addToCart(id) {
+			console.log(id);
+			var currency = "RM";
+			var name = id.querySelector('.food-description').textContent.trim();
+			console.log(name);
+			var price = id.querySelector('.food-item-price').textContent.trim();
+			console.log(price);
+			price = price.split(currency)[1];
+			console.log(price);
+			if (simpleCart.find({name: name}).length > 0) {
+				simpleCart.each(function(item, index) {
+					if (item.get('name') === name) {
+						console.log(item.quantity());
+						item.quantity(item.quantity()+1);
+						simpleCart.update();
+					}
+				});
+			} else {
+				simpleCart.add({
+					name: name,
+					price: price,
+					quantity: 1
+				});
+			}
+			// console.log(simpleCart.has());
+			// console.log(simpleCart.find({name: name}));
+		}
+	</script>
 </head>
 
 <body>
@@ -102,46 +131,53 @@
 				</ul>
 			</div>
 			<div class="clearfix"></div>
-			<?php
-			  if (!isset($_SESSION['arr'])) {
-			    echo "<h2>No menu data was found.</h2>";
-			  } else {
-					echo "<h3 class='restaurant-title'>Menu For ".$_SESSION['restaurantName']."</h3>";
-			    $menuList = $_SESSION['arr'];
-			    $length = count($menuList);
-					if ($length <= 0) {
-						echo "<h2 class='no-item-msg'>No menu items are registered on Food4All. Check back later.</h2>";
-					} else {
-						$j = 0;
-						for ($i = 0; $i < $length; $i+=2) {
-							echo "<div class='order-top wow fadeInDown'>";
-							for ($j; $j < min($i+2, $length) ; $j++) {
-								echo "
-									<li class='item-lists'>
-										<div class='food-item'>
-											<div class='food-description'>
-												<h4>".$menuList[$j]['foodName']."</h4>
-											</div>
-											<div class='food-item-container'>
-												<div class='food-image'>
-													<img class='img-responsive' src=".$menuList[$j]['image']." alt=''/>
+			<div class="simpleCart_shelfItem">
+				<form>
+					<?php
+						if (!isset($_SESSION['arr'])) {
+							echo "<h2>No menu data was found.</h2>";
+						} else {
+							echo "<h3 class='restaurant-title'>Menu For ".$_SESSION['restaurantName']."</h3>";
+							$menuList = $_SESSION['arr'];
+							$length = count($menuList);
+							if ($length <= 0) {
+								echo "<h2 class='no-item-msg'>No menu items are registered on Food4All. Check back later.</h2>";
+							} else {
+								$j = 0;
+								for ($i = 0; $i < $length; $i+=2) {
+									echo "<div class='order-top wow fadeInDown'>";
+									for ($j; $j < min($i+2, $length) ; $j++) {
+										$id = $menuList[$j]['foodID'];
+										echo "
+											<li class='item-lists' id=".$id.">
+												<div class='food-item'>
+													<div class='food-description'>
+														<h4>".$menuList[$j]['foodName']."</h4>
+													</div>
+													<div class='food-item-container'>
+														<div class='food-image'>
+															<img class='img-responsive' src=".$menuList[$j]['image']." alt=''/>
+														</div>
+														<div class='food-price'>
+															<p class='food-item-price'>Price : RM".$menuList[$j]['price']."</p>
+															<p>Status : ".$menuList[$j]['status']."</p>
+															<p>Ratings: ".$menuList[$j]['avgRating']."/5 (0 votes)</p>
+															<a class='cart-btn' href='javascript:;' onclick={addToCart(".$id.")}>Add to Cart</a>
+														</div>
+													</div>
 												</div>
-												<div class='food-price'>
-													<p>Price : RM".$menuList[$j]['price']."</p>
-													<p>Status : ".$menuList[$j]['status']."</p>
-													<p>Ratings: ".$menuList[$j]['avgRating']."/5 (0)</p>
-													<a class='cart-btn' href='#'>Add to Cart</a>
-												</div>
-											</div>
-										</div>
-									</li>";
+											</li>";
+									}
+									echo "<div class='clearfix'></div>";
+									echo "</div>";
+								}
 							}
-							echo "<div class='clearfix'></div>";
-							echo "</div>";
 						}
-					}
-				}
-			?>
+					?>
+					<input type="submit" name="submit"></input>
+					<button><a >Click</a></button>
+				</form>
+			</div>
 		</div>
 	</div>
 	<div class="contact-section" id="contact">

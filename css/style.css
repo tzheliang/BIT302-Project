@@ -1878,6 +1878,15 @@ h4.title {
 	border-bottom: 1px solid #DFDDDD;
 	padding-bottom: 13px;
 }
+.headerRow div {
+	float: left;
+}
+.itemRow {
+	clear: both;
+}
+.itemRow div {
+	float: left;
+}
 /*--contact-page--*/
 .contact-head {
 	padding: 3.2em 0;
