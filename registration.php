@@ -17,8 +17,8 @@
     $email = $_POST['email'];
     $pass = $_POST['PASSWORD'];
     $cpass = $_POST['cpassword'];
-    $fname = $_POST['firstname'];
-    $lname = $_POST['lastname'];
+    $fname = $_POST['firstName'];
+    $lname = $_POST['lastName'];
     $mobileNo = $_POST['contactNumber'];
     $test = $mobileNo;
     if (!$result){
