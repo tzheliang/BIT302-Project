@@ -11,7 +11,7 @@ CREATE TABLE Users(
 );
 
 CREATE TABLE Restaurant(
-  restaurantID CHAR(5) UNIQUE NOT NULL,
+  restaurantID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
   restaurantName VARCHAR(30) NOT NULL,
   location VARCHAR(20) NOT NULL,
   phoneNumber VARCHAR(15) NOT NULL,
@@ -23,20 +23,20 @@ CREATE TABLE Restaurant(
 );
 
 CREATE TABLE MenuItem(
-  foodID CHAR(5) UNIQUE NOT NULL,
+  foodID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
   foodName VARCHAR(30) NOT NULL,
   price DECIMAL(6, 2) NOT NULL,
   status VARCHAR(20) NOT NULL,
   image VARCHAR(100) NOT NULL,
   avgRating INT(1) NOT NULL,
-  restaurantID CHAR(5),
+  restaurantID INT(5),
   PRIMARY KEY(foodID),
   FOREIGN KEY(restaurantID) REFERENCES Restaurant(restaurantID)
 );
 
 CREATE TABLE FoodOrder(
-  orderID CHAR(5) UNIQUE NOT NULL,
-  TIMESTAMP TIMESTAMP NOT NULL,
+  orderID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
+  timestamp TIMESTAMP NOT NULL,
   deliveryStatus VARCHAR(20) NOT NULL,
   totalPrice DECIMAL(6, 2) NOT NULL,
   customerID INT(5) NOT NULL,
@@ -47,8 +47,8 @@ CREATE TABLE FoodOrder(
 );
 
 CREATE TABLE OrderItem(
-  orderID CHAR(5) NOT NULL,
-  foodID CHAR(5) NOT NULL,
+  orderID INT(5) NOT NULL,
+  foodID INT(5) NOT NULL,
   quantity int(3),
   PRIMARY KEY(orderID, foodID),
   FOREIGN KEY(orderID) REFERENCES FoodOrder(orderID),
@@ -56,19 +56,19 @@ CREATE TABLE OrderItem(
 );
 
 CREATE TABLE Feedback(
-  feedBackID CHAR(5) UNIQUE NOT NULL,
-  TIMESTAMP TIMESTAMP NOT NULL,
+  feedBackID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
+  timestamp TIMESTAMP NOT NULL,
   comments VARCHAR(400) NOT NULL,
-  orderID CHAR(5),
+  orderID INT(5),
   PRIMARY KEY(feedbackID),
   FOREIGN KEY(orderID) REFERENCES FoodOrder(orderID)
 );
 
 CREATE TABLE Rating(
-  ratingID CHAR(5) UNIQUE NOT NULL,
+  ratingID INT(5) UNIQUE NOT NULL,
   ratingValue INT(1) NOT NULL,
-  feedbackID CHAR(5) NOT NULL,
-  foodID CHAR(5) NOT NULL,
+  feedbackID INT(5) NOT NULL,
+  foodID INT(5) NOT NULL,
   FOREIGN KEY(feedbackID) REFERENCES Feedback(feedbackID),
   FOREIGN KEY(foodID) REFERENCES MenuItem(foodID)
 );
