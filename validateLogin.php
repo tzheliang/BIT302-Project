@@ -14,7 +14,6 @@
     $result = mysqli_query($con, $sql);
     $rows = mysqli_num_rows($result);
     if ($rows == 1){
-      header("location:profile.php");
 
       $row = mysqli_fetch_assoc($result);
       $_SESSION['username'] = $row['username'];
@@ -23,6 +22,8 @@
       $_SESSION['contactNumber'] = $row['contactNumber'];
       $_SESSION['address'] = $row['address'];
       $_SESSION['is_login'] = 1;
+      echo $_SESSION['is_login'];
+      header("location:profile.php");
     }
     else{
       echo "Invalid username or password.";

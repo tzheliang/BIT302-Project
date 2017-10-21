@@ -57,7 +57,7 @@
           <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
         <div class="queries">
-          <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p>
+          <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p><a href='signout.php'>Sign Out</a>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -75,7 +75,7 @@
         <div class="login-section">
           <ul>
             <?php
-               if (isset($_SESSION['is_login'])){
+               if (!isset($_SESSION['is_login'])){
                  echo "<li><a href='login.html'>Log In</a></li>";
                  echo "<li><h3>|</h3></li>";
                  echo "<li><a href='register.html'>Register</a></li>";
