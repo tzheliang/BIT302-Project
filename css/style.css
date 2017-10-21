@@ -4235,7 +4235,7 @@ a.morebtn {
 .row-quantity {
 	width: 50%;
 }
-a.pay-btn {
+button.pay-btn {
 	margin: 0 10px 20px 15px;
 	float: right;
   border: none;
@@ -4251,6 +4251,10 @@ a.pay-btn {
   -o-border-radius: 20px;
   text-decoration: none;
 }
-a.pay-btn:hover {
+button.pay-btn:hover {
  background:#E24425;
+}
+a.pay-btn {
+	text-decoration: none;
+	color: #fff;
 }

@@ -1,15 +1,17 @@
 <?php
+  session_start();
+
   $servername = "localhost";
   $name = "root";
   $password = "";
   $dbname = "food4all";
   $con = new mysqli($servername, $name, $password, $dbname);
 
-  $sql = "SELECT * FROM FoodOrder";
-  if ($result = mysqli_query($con, $sql)) {
-    $rows = mysqli_num_rows($result);
-
-  }
+  // $sql = "SELECT * FROM FoodOrder";
+  // if ($result = mysqli_query($con, $sql)) {
+  //   $rows = mysqli_num_rows($result);
+  //
+  // }
 ?>
 <!DOCTYPE html>
 <html>
@@ -133,7 +135,10 @@
           </table>
         </div>
         <div>
-          <a class='pay-btn' href='javascript:;' onclick={}>Confirm payment</a>
+          <form action="payment.php" method="POST">
+            <button name='cancel' class=' pay-btn' href="index.html"><a class="pay-btn" href="index.html">Cancel</a></button>
+            <button type='submit' name='submit' class=' pay-btn'>Pay now</button>
+          </form>
         </div>
       </div>
     </div>
