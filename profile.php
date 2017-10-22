@@ -5,7 +5,7 @@
 <html>
 
 <head>
-  <title><?php echo $_SESSION['firstName']."'s Profile"; ?></title>
+  <title>Food4All - Biodata</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
