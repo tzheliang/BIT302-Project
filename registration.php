@@ -1,5 +1,6 @@
 <?php
   //Connect to Database
+  session_start();
   $erremail = $errpass = $errmobileNo = "";
   $servername = "localhost";
   $username = "root";
