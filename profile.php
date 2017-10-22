@@ -5,7 +5,7 @@
 <html>
 
 <head>
-  <title><?php echo $_SESSION['username']."'s Profile"; ?></title>
+  <title><?php echo $_SESSION['firstName']."'s Profile"; ?></title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -57,7 +57,7 @@
           <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
         <div class="queries">
-          <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p><a href='signout.php'>Sign Out</a>
+          <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -81,7 +81,8 @@
                  echo "<li><a href='register.html'>Register</a></li>";
                }
                else {
-                 echo "<li>Logged in as ".$_SESSION['username']."</li>";
+                 echo "<li><h4>Logged in as ".$_SESSION['username']."</h4></li>";
+                 echo "<li><h3>|</h3></li>";
                  echo "<li><a href='signout.php'>Sign Out</a></li>";
                }
              ?>
@@ -98,7 +99,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <span>User Information</span>
+          <span><b>Your Biodata</b></span>
         </h4>
       </div>
       <div>
