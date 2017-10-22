@@ -7,8 +7,9 @@
   $con = new mysqli($servername, $username, $password, $dbname);
   $_SESSION['payment'];
   if (isset($_POST['check'])) {
-    $_SESSION['payment'] = 0;
+    unset($_SESSION['payment']);
   }
+  echo $_SESSION['payment'];
 
   if (isset($_POST['submit'])) {
     $customerID = $_SESSION['userID'];
