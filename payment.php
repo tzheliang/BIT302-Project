@@ -5,11 +5,9 @@
   $password = "";
   $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
-  $_SESSION['payment'];
   if (isset($_POST['check'])) {
     unset($_SESSION['payment']);
   }
-  echo $_SESSION['payment'];
 
   if (isset($_POST['submit'])) {
     $customerID = $_SESSION['userID'];
