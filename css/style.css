@@ -4306,3 +4306,7 @@ a.pay-btn:hover {
 .order-panel p {
 	font-size: 1.3em;
 }
+.info-table td {
+	padding: 10px 10px;
+	font-size: 1.2em;
+}

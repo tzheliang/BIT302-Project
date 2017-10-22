@@ -84,9 +84,8 @@
     });
   </script>
   <script>
-    var check = <?php echo $_SESSION['payment'];?>;
+    var check = <?php $check = isset($_SESSION['payment']) ? 1 : 0; echo $check;?> ;
     if (check) {
-      console.log(check);
       simpleCart.empty();
       simpleCart.save();
       $.ajax({
@@ -156,7 +155,7 @@
           </div>
           <div>
             <div class="panel-body article-wrapper">
-              <table>
+              <table class="info-table">
                 <tr>
                   <td><b>Name:</b></td>
                   <td><?php echo $_SESSION['fullname']; ?></td>
