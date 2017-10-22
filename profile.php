@@ -40,7 +40,7 @@
 <html>
 
 <head>
-  <title>Food4All - Biodata</title>
+  <title><?php echo $_SESSION['firstName']?>'s Profile</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -151,7 +151,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Your Biodata</b></span>
+              <span><b>Your Personal Information</b></span>
             </h4>
           </div>
           <div>
