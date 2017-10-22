@@ -1,11 +1,23 @@
 <?php
   session_start();
+
+  $servername = "localhost";
+  $name = "root";
+  $password = "";
+  $dbname = "food4all";
+  $con = new mysqli($servername, $name, $password, $dbname);
+
+  // $sql = "SELECT * FROM FoodOrder";
+  // if ($result = mysqli_query($con, $sql)) {
+  //   $rows = mysqli_num_rows($result);
+  //
+  // }
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title><?php echo $_SESSION['firstName']."'s Profile"; ?></title>
+  <title>Food4All - Payment</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -74,18 +86,8 @@
         </div>
         <div class="login-section">
           <ul>
-            <?php
-               if (!isset($_SESSION['is_login'])){
-                 echo "<li><a href='login.html'>Log In</a></li>";
-                 echo "<li><h3>|</h3></li>";
-                 echo "<li><a href='register.html'>Register</a></li>";
-               }
-               else {
-                 echo "<li><h4>Logged in as ".$_SESSION['username']."</h4></li>";
-                 echo "<li><h3>|</h3></li>";
-                 echo "<li><a href='signout.php'>Sign Out</a></li>";
-               }
-             ?>
+            <li><a href="login.html">Login</a> </li> |
+            <li><a href="register.html">Register</a> </li>
             <div class="clearfix"></div>
           </ul>
         </div>
@@ -96,32 +98,47 @@
   <!-- header-section-ends -->
   <!-- content-section-starts -->
   <div class="content">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <span><b>Your Biodata</b></span>
-        </h4>
-      </div>
-      <div>
-        <div class="panel-body article-wrapper">
-          <table>
+    <div class="container">
+      <div class="payment-confirmation">
+        <div class="table-responsive">
+          <table class="table-hover">
+            <thead>
+              <tr class="row-header">
+                <th class="row-name">Item Name</th>
+                <th class="row-price">Price</th>
+                <th class="row-quantity">Quantity</th>
+              </tr>
+            </thead>
+            <?php
+              $count = $_POST['itemCount'];
+              for ($i = 1 ; $i<=$count;$i++){
+                echo "<tr>";
+                echo "<td>".$_POST['item_name_'.$i]."</td>";
+                echo "<td>".$_POST['item_price_'.$i]."</td>";
+                echo "<td>".$_POST['item_quantity_'.$i]."</td>";
+                echo "</tr>";
+              }
+            ?>
             <tr>
-              <td><b>Name:</b></td>
-              <td><?php echo $_SESSION['fullname']; ?></td>
-            </tr>
-            <tr>
-              <td><b>Address:</b></td>
-              <td><?php echo $_SESSION['address']; ?></td>
-            </tr>
-            <tr>
-              <td><b>Email:</b></td>
-              <td><?php echo $_SESSION['email']; ?></td>
-            </tr>
-            <tr>
-              <td><b>Phone Number:</b></td>
-              <td><?php echo $_SESSION['contactNumber']; ?></td>
+              <td></td>
+              <td>Total:</td>
+              <td>
+                <?php
+                $total =0;
+                for ($i = 1 ; $i<=$count;$i++) {
+                  $total += ($_POST['item_price_'.$i] * $_POST['item_quantity_'.$i]);
+                }
+                echo "RM".$total;
+                ?>
+              </td>
             </tr>
           </table>
+        </div>
+        <div>
+          <form action="payment.php" method="POST">
+            <button name='cancel' class=' pay-btn' href="index.html"><a class="pay-btn" href="index.html">Cancel</a></button>
+            <button type='submit' name='submit' class=' pay-btn'>Pay now</button>
+          </form>
         </div>
       </div>
     </div>
@@ -180,5 +197,4 @@
   <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 </body>
-
 </html>

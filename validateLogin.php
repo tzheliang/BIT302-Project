@@ -2,10 +2,10 @@
   //Connect to Database
   $errorMsg = "";
   $servername = "localhost";
-  $name = "root";
+  $username = "root";
   $password = "";
   $dbname = "food4all";
-  $con = new mysqli($servername, $name, $password, $dbname);
+  $con = new mysqli($servername, $username, $password, $dbname);
 
   if (isset($_POST['submit'])){
     $loginUsername = $_POST['email'];
@@ -23,6 +23,7 @@
       $_SESSION['contactNumber'] = $row['contactNumber'];
       $_SESSION['address'] = $row['address'];
       $_SESSION['is_login'] = 1;
+
     }
     else{
       echo "Invalid username or password.";

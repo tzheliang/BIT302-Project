@@ -794,7 +794,6 @@ h3.restaurant-title {
   margin-bottom:1.7em;
 }
 .cart-item {
-  width: 20%;
   float: left;
   margin-right: 5%;
 }
@@ -819,7 +818,7 @@ h3.restaurant-title {
   float: left;
 }
 .cart-item-info h3 {
-  font-size: 1em;
+  /*font-size: 1em;*/
   font-weight: 600;
 }
 .cart-item-info h3 a {
@@ -832,7 +831,7 @@ h3.restaurant-title {
   margin: 0.7em 0;
 }
 ul.qty {
-  padding: 0;
+  padding: 20px 0;
   margin: 0;
   list-style: none;
 }
@@ -841,8 +840,28 @@ ul.qty li {
   margin-right: 10%;
 }
 ul.qty li p {
-  font-size: 0.8125em;
+  font-size: 1.2em;
   color: #555;
+	font-weight: 500;
+}
+a.checkout-btn {
+	margin: 45px 0;
+	float: left;
+  border: none;
+  outline: none;
+  padding: 0.3em 1.6em;
+  color: #fff;
+  background: #5BBD50;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-decoration: none;
+}
+a.checkout-btn:hover {
+ background:#E24425;
 }
 .delivery {
   margin-top: 3em;
@@ -4195,4 +4214,51 @@ a.morebtn {
   float: left;
   width: 69%;
 }
+}
+.table-hover {
+	margin: 20px 0;
+}
+.table-hover td {
+	padding: 20px 0;
+	font-size: 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.table-hover th {
+	font-size: 2em;
+}
+.row-name{
+	width: 90%;
+}
+.row-price {
+	width: 50%;
+}
+.row-quantity {
+	width: 50%;
+}
+button.pay-btn {
+	margin: 0 10px 20px 15px;
+	float: right;
+  border: none;
+  outline: none;
+  padding: 0.3em 1.6em;
+  color: #fff;
+  background: #5BBD50;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-decoration: none;
+}
+button.pay-btn:hover {
+ background:#E24425;
+}
+a.pay-btn {
+	text-decoration: none;
+	color: #fff;
+}
+.content-home .panel-default .panel-heading
+{
+	color:white;
 }

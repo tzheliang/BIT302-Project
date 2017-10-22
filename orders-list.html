@@ -42,35 +42,7 @@
 			});
 		});
 	</script>
-	<script src="js/simpleCart.min.js">
-	</script>
-	<script>
-		function addToCart(id) {
-			console.log(id);
-			var currency = "RM";
-			var name = id.querySelector('.food-description').textContent.trim();
-			console.log(name);
-			var price = id.querySelector('.food-item-price').textContent.trim();
-			console.log(price);
-			price = price.split(currency)[1];
-			console.log(price);
-			if (simpleCart.find({name: name}).length > 0) {
-				simpleCart.each(function(item, index) {
-					if (item.get('name') === name) {
-						console.log(item.quantity());
-						item.quantity(item.quantity()+1);
-						simpleCart.update();
-					}
-				});
-			} else {
-				simpleCart.add({
-					name: name,
-					price: price,
-					quantity: 1
-				});
-			}
-		}
-	</script>
+	<script src="js/simpleCart.min.js"></script>
 </head>
 
 <body>
@@ -153,7 +125,7 @@
 												</div>
 												<div class='food-item-container'>
 													<div class='food-image'>
-														<img class='img-responsive' src=".$menuList[$j]['image']." alt=''/>
+														<img class='img-responsive food-item-image' src=".$menuList[$j]['image']." alt=''/>
 													</div>
 													<div class='food-price'>
 														<p class='food-item-price'>Price : RM".$menuList[$j]['price']."</p>
@@ -226,7 +198,40 @@
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
+	<script>
+		function addToCart(id) {
+			id = document.getElementById(id);
+			var foodID = id.id;
+			console.log(id);
+			var currency = "RM";
+			var name = id.querySelector('.food-description').textContent.trim();
+			console.log(name);
+			var price = id.querySelector('.food-item-price').textContent.trim();
+			console.log(price);
+			price = price.split(currency)[1];
+			console.log(price);
+			var img = id.querySelector('.food-item-image').getAttribute('src');
+			console.log(img);
+			if (simpleCart.find({name: name}).length > 0) {
+				simpleCart.each(function(item, index) {
+					if (item.get('name') === name) {
+						console.log(item.quantity());
+						item.quantity(item.quantity()+1);
+						simpleCart.update();
+					}
+				});
+			} else {
+				simpleCart.add({
+					id: foodID,
+					name: name,
+					price: price,
+					thumb: img,
+					quantity: 1
+				});
+			}
+			simpleCart.save();
+		}
+	</script>
 </body>
 
 </html>
