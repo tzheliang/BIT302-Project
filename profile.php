@@ -46,6 +46,19 @@
       });
     });
   </script>
+  <script>
+    var check = <?php echo $_SESSION['payment'];?>;
+    if (check) {
+      console.log(check);
+      simpleCart.empty();
+      simpleCart.save();
+      $.ajax({
+        type: 'POST',
+        url: 'payment.php',
+        data: {check: 0}
+      });
+    }
+  </script>
 </head>
 
 <body>

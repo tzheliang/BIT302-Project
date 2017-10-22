@@ -19,6 +19,7 @@
       header("location:profile.php");
 
       $row = mysqli_fetch_assoc($result);
+      $_SESSION['userID'] = $row['userID'];
       $_SESSION['username'] = $row['username'];
       $_SESSION['fullname'] = $row['firstName']." ".$row['lastName'];
       $_SESSION['email'] = $row['email'];
