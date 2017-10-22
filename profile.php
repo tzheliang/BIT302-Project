@@ -1,5 +1,40 @@
 <?php
   session_start();
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "food4all";
+  $con = new mysqli($servername, $username, $password, $dbname);
+
+  $customerID = $_SESSION['userID'];
+  $sql = "SELECT * FROM foodorder WHERE customerID = '$customerID'";
+
+  $result = mysqli_query($con, $sql);
+  $counter = mysqli_num_rows($result);
+  if ($counter == 0) {
+    $hasOrder = 0;
+  } else {
+    $hasOrder = 1;
+  }
+
+  function getRestaurantInfo($ownerID, $con) {
+    $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
+    $result2 = mysqli_query($con, $sql2);
+    $row2 = mysqli_fetch_assoc($result2);
+    $restaurantArray = array('restaurantName'=>$row2['restaurantName'], 'location'=> $row2['location']);
+    return $restaurantArray;
+  }
+
+  function getFoodInfo($orderID, $con) {
+    $sql3 = "SELECT f.foodName, f.price, o.quantity FROM menuitem f, orderitem o WHERE f.foodID = o.foodID AND o.orderID = '$orderID'";
+    $result3 = mysqli_query($con, $sql3);
+    while ($row3 = mysqli_fetch_assoc($result3)) {
+      $foodArray[] = array('foodName'=>$row3['foodName'],'price'=>$row3['price'], 'quantity'=>$row3['quantity']);
+    }
+    return $foodArray;
+  }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,9 +44,11 @@
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery.min.js"></script>
+  <script src="./js/jquery-1.9.1.js"></script>
+  <script src="./js/bootstrap.js"></script>
   <!-- Custom Theme files -->
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" media="all"  />
   <!-- Custom Theme files -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="application/x-javascript">
@@ -109,32 +146,153 @@
   <!-- header-section-ends -->
   <!-- content-section-starts -->
   <div class="content">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <span><b>Your Biodata</b></span>
-        </h4>
+    <div class="profile-info">
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span><b>Your Biodata</b></span>
+            </h4>
+          </div>
+          <div>
+            <div class="panel-body article-wrapper">
+              <table>
+                <tr>
+                  <td><b>Name:</b></td>
+                  <td><?php echo $_SESSION['fullname']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Address:</b></td>
+                  <td><?php echo $_SESSION['address']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Email:</b></td>
+                  <td><?php echo $_SESSION['email']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Phone Number:</b></td>
+                  <td><?php echo $_SESSION['contactNumber']; ?></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="panel-body article-wrapper">
-          <table>
-            <tr>
-              <td><b>Name:</b></td>
-              <td><?php echo $_SESSION['fullname']; ?></td>
-            </tr>
-            <tr>
-              <td><b>Address:</b></td>
-              <td><?php echo $_SESSION['address']; ?></td>
-            </tr>
-            <tr>
-              <td><b>Email:</b></td>
-              <td><?php echo $_SESSION['email']; ?></td>
-            </tr>
-            <tr>
-              <td><b>Phone Number:</b></td>
-              <td><?php echo $_SESSION['contactNumber']; ?></td>
-            </tr>
-          </table>
+    </div>
+    <div class="order-summary">
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span><b>Your Order Summary</b></span>
+            </h4>
+          </div>
+          <div>
+            <div class="panel-body article-wrapper table-responsive">
+              <?php
+                if (!$hasOrder) {
+                  echo "
+                    <div class='no-orders'>
+                      <h2>You have not made any orders.</h2>
+                      </div>
+                  ";
+                } else {
+                  $orderCount = 0;
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $restaurantArray = getRestaurantInfo($row['ownerID'], $con);
+                    $collapseDivID = "order".$row['orderID'];
+                    $divID = "collapse".$row['orderID'];
+                    $divIDTarget = "#".$divID;
+                    echo "
+                      <table class='table table-hover profile-table'>
+                        <tr>
+                          <th>Order no.</th>
+                          <th>Order Date</th>
+                          <th>Total Price</th>
+                          <th>Restaurant</th>
+                          <th>Restaurant Location</th>
+                          <th>Delivery Status</th>
+                        </tr>
+                        <tr>
+                          <td>".++$orderCount."</td>
+                          <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
+                          <td>".$row['totalPrice']."</td>
+                          <td>".$restaurantArray['restaurantName']."</td>
+                          <td>".$restaurantArray['location']."</td>
+                          <td>".$row['deliveryStatus']."</td>
+                        </tr>
+                      </table>
+                      <div class='panel-group'>
+                        <div class='panel panel-default'>
+                          <div id=".$collapseDivID." class='panel-heading menu-panel' href=".$divIDTarget." data-toggle='collapse'>
+                            <p>Ordered Items List</p>
+                            <i class='pull-right fa fa-chevron-circle-down fa-chevron-circle-up'></i>
+                            <div class='clearfix'></div>
+                          </div>
+                          <div id=".$divID." class='panel-collapse collapse order-panel'>";
+                          $foodArray = getFoodInfo($row['orderID'], $con);
+                          // $foodCount = 0;
+                          foreach ($foodArray as $food) {
+                            echo "<div class='panel-body'>";
+                            echo "<p>";
+                            echo "Food name: ";
+                            echo $food['foodName'];
+                            echo "</p>";
+                            echo "<p>";
+                            echo "Quantity: ";
+                            echo $food['quantity'];
+                            echo "</p>";
+                            echo "<p>";
+                            echo "Price: RM";
+                            echo $food['price'];
+                            echo "</p>";
+                            echo "</div>";
+                          }
+                          echo "
+                          </div></div></div>";
+                        }
+                      }
+                      ?>
+              <!-- <table class="table table-hover">
+                <tr>
+                  <th>Order no.</th>
+                  <th>Order Date</th>
+                  <th>Total Price</th>
+                  <th>Restaurant</th>
+                  <th>Delivery Status</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>12/02/2017</td>
+                  <td>12.99</td>
+                  <td>pizza hut</td>
+                  <td>deliverd</td>
+                </tr>
+              </table>
+              <div class="panel-group">
+                <div class="panel panel-default">
+                  <div id='order1' class="panel-heading" href='#collapse1' data-toggle='collapse'>
+                    <p>Ordered Items List</p>
+                    <i class="fa fa-chevron-circle-down pull-right"></i>
+                    <div class='clearfix'></div>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">Panel Body</div>
+                    <div class="panel-body">Panel Footer</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table table-hover">
+                <tr>
+                  <th>Order no.</th>
+                  <th>Order Date</th>
+                  <th>Total Price</th>
+                  <th>Restaurant</th>
+                  <th>Delivery Status</th>
+                </tr>
+              </table> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -189,6 +347,27 @@
       });
 
     });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".menu-panel").click(function() {
+        $(this).find('i').toggleClass("fa-chevron-circle-down");
+      });
+    });
+    //   console.log(div);
+    //   div.click(function() {
+    //     div.find("i").toggleClass("fa-chevron-circle-down");
+    //     // if (div.find("i").hasClass('fa-chevron-circle-down')) {
+    // //       div.find("i").removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
+    // //       console.log('one');
+    // //     } else {
+    // //       div.find("i").addClass('fa-chevron-circle-down').removeClass('fa-chevron-circle-up');
+    // //       console.log('two');
+    // //     }
+    //   });
+
+
+
   </script>
   <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
