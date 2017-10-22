@@ -46,6 +46,19 @@
       });
     });
   </script>
+  <script>
+    var check = <?php echo $_SESSION['payment'];?>;
+    if (check) {
+      console.log(check);
+      simpleCart.empty();
+      simpleCart.save();
+      $.ajax({
+        type: 'POST',
+        url: 'payment.php',
+        data: {check: 0}
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -81,7 +94,7 @@
                  echo "<li><a href='register.html'>Register</a></li>";
                }
                else {
-                 echo "<li><h4>Logged in as ".$_SESSION['username']."</h4></li>";
+                 echo "<li><a href='profile.php'>Logged in as ".$_SESSION['username']."</a></li>";
                  echo "<li><h3>|</h3></li>";
                  echo "<li><a href='signout.php'>Sign Out</a></li>";
                }

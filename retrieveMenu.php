@@ -21,6 +21,7 @@
     $result2 = mysqli_query($con, $sql2);
     $row = mysqli_fetch_assoc($result2);
     $_SESSION['restaurantName'] = $row['restaurantName'];
+    $_SESSION['restaurantID'] = $restaurantID;
     header("location: orders-list.html");
     mysqli_close($con);
   }

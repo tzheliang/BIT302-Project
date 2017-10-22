@@ -5,7 +5,7 @@
 <html>
 
 <head>
-	<title>Food4All - CheckOut</title>
+	<title>Food4All - Shopping Cart</title>
 	<link rel="icon" href="images/Icon.ico" type="image/x-icon">
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -139,7 +139,7 @@
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="shoppingcart.html">
 							<h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<img src="images/bag.png" alt=""></h3>
 						</a>
 						<p><a href="javascript:;" onClick={clearCart()} class="simpleCart_empty">Empty cart</a></p>
@@ -168,7 +168,7 @@
                  echo "<li><a href='register.html'>Register</a></li>";
                }
                else {
-                 echo "<li><h4>Logged in as ".$_SESSION['username']."</h4></li>";
+                 echo "<li><a href='profile.php'>Logged in as ".$_SESSION['username']."</a></li>";
                  echo "<li><h3>|</h3></li>";
                  echo "<li><a href='signout.php'>Sign Out</a></li>";
                }
@@ -207,7 +207,7 @@
 							newArray.push(obj);
 						});
 						var total = simpleCart.total();
-						console.log(total);
+						var total = total.toFixed(2);
 						data = {item: newArray, grandtotal: total};
 					} else {
 						data = {grandtotal: 0.00}
@@ -249,6 +249,11 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		if (simpleCart.quantity() == 0) {
+			$('.Sub-total').css('display', "none");
+		}
+	</script>
 	<!-- content-section-ends -->
 	<!-- footer-section-starts -->
 	<div class="footer">

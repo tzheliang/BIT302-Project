@@ -1,17 +1,5 @@
 <?php
   session_start();
-
-  $servername = "localhost";
-  $name = "root";
-  $password = "";
-  $dbname = "food4all";
-  $con = new mysqli($servername, $name, $password, $dbname);
-
-  // $sql = "SELECT * FROM FoodOrder";
-  // if ($result = mysqli_query($con, $sql)) {
-  //   $rows = mysqli_num_rows($result);
-  //
-  // }
 ?>
 <!DOCTYPE html>
 <html>
@@ -93,7 +81,7 @@
                  echo "<li><a href='register.html'>Register</a></li>";
                }
                else {
-                 echo "<li><h4>Logged in as ".$_SESSION['username']."</h4></li>";
+                 echo "<li><a href='profile.php'>Logged in as ".$_SESSION['username']."</a></li>";
                  echo "<li><h3>|</h3></li>";
                  echo "<li><a href='signout.php'>Sign Out</a></li>";
                }
@@ -111,7 +99,19 @@
     <div class="container">
       <div class="payment-confirmation">
         <div class="table-responsive">
-          <table class="table-hover">
+          <table class="customer-table">
+            <tr>
+              <th>Full Name: </th>
+              <td><?php echo $_SESSION['fullname'];?></td>
+            </tr>
+            <tr>
+              <th>Contact Number: </th>
+              <td><?php echo $_SESSION['contactNumber']; ?></td>
+            </tr>
+          </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover table-payment">
             <thead>
               <tr class="row-header">
                 <th class="row-name">Item Name</th>
@@ -121,13 +121,16 @@
             </thead>
             <?php
               $count = $_POST['itemCount'];
+              $items = [];
               for ($i = 1 ; $i<=$count;$i++){
+                $items[] = array('item'=>$_POST['item_name_'.$i],'quantity'=>$_POST['item_quantity_'.$i]);
                 echo "<tr>";
                 echo "<td>".$_POST['item_name_'.$i]."</td>";
                 echo "<td>".$_POST['item_price_'.$i]."</td>";
                 echo "<td>".$_POST['item_quantity_'.$i]."</td>";
                 echo "</tr>";
               }
+              $_SESSION['cart'] = $items;
             ?>
             <tr>
               <td></td>
@@ -146,7 +149,8 @@
         </div>
         <div>
           <form action="payment.php" method="POST">
-            <button name='cancel' class=' pay-btn' href="index.html"><a class="pay-btn" href="index.html">Cancel</a></button>
+            <input type="number" class="total-price" name="total-price" value='<?php echo $total; ?>'/>
+            <a class="pay-btn" href="index.html">Cancel</a>
             <button type='submit' name='submit' class=' pay-btn'>Pay now</button>
           </form>
         </div>

@@ -4215,15 +4215,19 @@ a.morebtn {
   width: 69%;
 }
 }
-.table-hover {
+.table-payment {
 	margin: 20px 0;
 }
-.table-hover td {
+.table-payment td {
 	padding: 20px 0;
 	font-size: 1.5em;
 	font-family: 'Source Sans Pro', sans-serif;
+
 }
-.table-hover th {
+.total-price {
+	display: none;
+}
+.table-payment th {
 	font-size: 2em;
 }
 .row-name{
@@ -4234,6 +4238,17 @@ a.morebtn {
 }
 .row-quantity {
 	width: 50%;
+}
+.customer-table {
+	margin: 20px 0;
+}
+.customer-table td {
+	padding: 20px 10px;
+	font-size: 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.customer-table th {
+	font-size: 1.5em;
 }
 button.pay-btn {
 	margin: 0 10px 20px 15px;
@@ -4255,8 +4270,23 @@ button.pay-btn:hover {
  background:#E24425;
 }
 a.pay-btn {
-	text-decoration: none;
-	color: #fff;
+	margin: 0 10px 20px 15px;
+	float: right;
+  border: none;
+  outline: none;
+  padding: 0.3em 1.6em;
+  color: #fff;
+  background: #5BBD50;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-decoration: none;
+}
+a.pay-btn:hover {
+ background:#E24425;
 }
 .content-home .panel-default .panel-heading
 {
