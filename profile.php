@@ -86,6 +86,7 @@
   <script>
     var check = <?php $check = isset($_SESSION['payment']) ? 1 : 0; echo $check;?> ;
     if (check) {
+      alert("Payment Successful. Thank you for choosing us.");
       simpleCart.empty();
       simpleCart.save();
       $.ajax({
