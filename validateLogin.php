@@ -1,5 +1,7 @@
 <?php
   //Connect to Database
+  session_start();
+
   $errorMsg = "";
   $servername = "localhost";
   $username = "root";
@@ -23,6 +25,7 @@
       $_SESSION['contactNumber'] = $row['contactNumber'];
       $_SESSION['address'] = $row['address'];
       $_SESSION['is_login'] = 1;
+      $_SESSION['firstName'] = $row['firstName'];
 
     }
     else{
