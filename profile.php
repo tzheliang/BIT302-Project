@@ -84,8 +84,13 @@
     });
   </script>
   <script>
-    var check = <?php $check = isset($_SESSION['payment']) ? 1 : 0; echo $check;?> ;
+    var check = <?php
+    $check = isset($_SESSION['payment']) ? 1 : 0;
+    echo $check;
+    ?> ;
     if (check) {
+      console.log(check);
+      alert("Payment Successful. Thank you for choosing us.");
       simpleCart.empty();
       simpleCart.save();
       $.ajax({
@@ -115,7 +120,7 @@
       <div class="container">
         <div class="top-menu">
           <ul>
-            <li class="active"><a href="index.html">Home</a></li>|
+            <li><a href="index.html">Home</a></li>|
             <li><a href="popular-restaurants.html">Popular Restaurants</a></li>|
             <li><a href="contact.html">contact</a></li>
             <div class="clearfix"></div>

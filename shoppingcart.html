@@ -86,6 +86,7 @@
 				if (item.get('id') === x.id) {
 					item.remove();
 					$('.'+ x.id).remove();
+          location.reload();
 				}
 			});
 		}
@@ -93,8 +94,13 @@
 			$('.cart-header').remove();
 			location.reload();
 		}
-		function checkout() {
-			simpleCart.checkout();
+		function checkout(check) {
+			if (!check) {
+        alert("Please sign in first.");
+        window.location.replace("./login.html");
+      } else {
+        simpleCart.checkout();
+      }
 		}
 	</script>
 	<script id="tutorial-template" type="text/template">
@@ -121,7 +127,8 @@
 	 	{{/item}}
 		<div class="Sub-total">
 			<h2>Grand-total price: RM{{grandtotal}}</h2>
-			<a class='checkout-btn' href='javascript:;' onclick={checkout()}>Checkout now</a>
+			<a class='checkout-btn' href='javascript:;' onclick={checkout(<?php
+      $check = isset($_SESSION['is_login']) ? 1 : 0;echo $check;?>)}>Checkout now</a>
 		</div>
  	</script>
 </head>
