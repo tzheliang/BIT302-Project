@@ -118,14 +118,6 @@
     </div>
     <div class="menu-bar">
       <div class="container">
-        <div class="top-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>|
-            <li><a href="popular-restaurants.html">Popular Restaurants</a></li>|
-            <li><a href="contact.html">contact</a></li>
-            <div class="clearfix"></div>
-          </ul>
-        </div>
         <div class="login-section">
           <ul>
             <?php
@@ -162,19 +154,19 @@
             <div class="panel-body article-wrapper">
               <table class="info-table">
                 <tr>
-                  <td><b>Name:</b></td>
+                  <td><b>Owner Name:</b></td>
                   <td><?php echo $_SESSION['fullname']; ?></td>
                 </tr>
                 <tr>
-                  <td><b>Address:</b></td>
+                  <td><b>Restaurant Address:</b></td>
                   <td><?php echo $_SESSION['address']; ?></td>
                 </tr>
                 <tr>
-                  <td><b>Email:</b></td>
+                  <td><b>Business Email:</b></td>
                   <td><?php echo $_SESSION['email']; ?></td>
                 </tr>
                 <tr>
-                  <td><b>Phone Number:</b></td>
+                  <td><b>Contact Number:</b></td>
                   <td><?php echo $_SESSION['contactNumber']; ?></td>
                 </tr>
               </table>
@@ -183,12 +175,13 @@
         </div>
       </div>
     </div>
+    <!-- reuse bottom code for order booking -->
     <div class="order-summary">
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Your Order Summary</b></span>
+              <span><b>Order Booking</b></span>
             </h4>
           </div>
           <div>
@@ -297,32 +290,8 @@
               </table> -->
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-section-grids">
-          <div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
-            <h4>Site Links</h4>
-            <ul>
-              <li><i class="point"></i></li>
-              <li class="data"><a href="aboutUs.html">About Us</a></li>
-            </ul>
-            <ul>
-              <li><i class="point"></i></li>
-              <li class="data"><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <ul>
-              <li><i class="point"></i></li>
-              <li class="data"><a href="privacyPolicy.html">Privacy Policy</a></li>
-            </ul>
-            <ul>
-              <li><i class="point"></i></li>
-              <li class="data"><a href="terms.html">Terms of Use</a></li>
-            </ul>
           </div>
-          <div class="clearfix"></div>
+        <a class="acount-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
         </div>
       </div>
     </div>
