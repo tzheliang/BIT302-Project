@@ -6,7 +6,8 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `contactNumber`
+    `contactNumber`,
+    `isCustomer`
   )
 VALUES(
   'pizzahut',
@@ -14,7 +15,8 @@ VALUES(
   'pizza',
   'hut',
   'pizzahutmy@mail.com',
-  '012-5201314'
+  '012-5201314',
+  0
 );
 
 INSERT
@@ -25,7 +27,8 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `contactNumber`
+    `contactNumber`,
+    `isCustomer`
   )
 VALUES(
   'subway',
@@ -33,7 +36,8 @@ VALUES(
   'sub',
   'way',
   'subway@mail.com',
-  '012-3456789'
+  '012-3456789',
+  0
 );
 
 INSERT
@@ -44,7 +48,8 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `contactNumber`
+    `contactNumber`,
+    `isCustomer`
   )
 VALUES(
   'barista',
@@ -52,7 +57,8 @@ VALUES(
   'bar',
   'ista',
   'barista@mail.com',
-  '019-9999999'
+  '019-9999999',
+  0
 );
 
 INSERT
@@ -63,7 +69,8 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `contactNumber`
+    `contactNumber`,
+    `isCustomer`
   )
 VALUES(
   'papajohns',
@@ -71,7 +78,8 @@ VALUES(
   'Papa',
   'Johns',
   'papajohns@mail.com',
-  '013-5791113'
+  '013-5791113',
+  0
 );
 
 INSERT
@@ -82,7 +90,8 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `contactNumber`
+    `contactNumber`,
+    `isCustomer`
   )
 VALUES(
   'dominos',
@@ -90,7 +99,8 @@ VALUES(
   'Dominos',
   'Pizza',
   'dominos@mail.com',
-  '012-4681012'
+  '012-4681012',
+  0
 );
 
 INSERT
@@ -101,7 +111,8 @@ INTO
     `firstName`,
     `lastName`,
     `email`,
-    `contactNumber`
+    `contactNumber`,
+    `isCustomer`
   )
 VALUES(
   'kfc',
@@ -109,7 +120,8 @@ VALUES(
   'Kentucky',
   'Fried Chicken',
   'kfc@mail.com',
-  '011-1111111'
+  '011-1111111',
+  0
 );
 
 INSERT

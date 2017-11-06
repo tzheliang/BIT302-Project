@@ -6,6 +6,7 @@ CREATE TABLE Users(
   lastName VARCHAR(20) NOT NULL,
   email VARCHAR(30) NOT NULL,
   contactNumber VARCHAR(15) NOT NULL,
+  isCustomer int(1) NOT NULL DEFAULT '1',
   address VARCHAR(30),
   PRIMARY KEY(userID)
 );
