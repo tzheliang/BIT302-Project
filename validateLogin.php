@@ -16,7 +16,6 @@
     $result = mysqli_query($con, $sql);
     $rows = mysqli_num_rows($result);
     if ($rows == 1){
-      header("location:profile.php");
 
       $row = mysqli_fetch_assoc($result);
       $_SESSION['userID'] = $row['userID'];
@@ -25,8 +24,16 @@
       $_SESSION['email'] = $row['email'];
       $_SESSION['contactNumber'] = $row['contactNumber'];
       $_SESSION['address'] = $row['address'];
+      $_SESSION['isCustomer'] = $row['isCustomer'];
       $_SESSION['is_login'] = 1;
       $_SESSION['firstName'] = $row['firstName'];
+
+      if ($_SESSION['isCustomer'] == 1){
+        header("location:profile.php");
+      }
+      else {
+        header("location:ownerProfile.php");
+      }
 
     }
     else{

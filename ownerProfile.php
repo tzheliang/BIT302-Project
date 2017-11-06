@@ -158,12 +158,12 @@
                   <td><?php echo $_SESSION['fullname']; ?></td>
                 </tr>
                 <tr>
-                  <td><b>Restaurant Address:</b></td>
-                  <td><?php echo $_SESSION['address']; ?></td>
-                </tr>
-                <tr>
                   <td><b>Business Email:</b></td>
                   <td><?php echo $_SESSION['email']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Restaurant Area:</b></td>
+                  <td><?php echo $_SESSION['address']; ?></td>
                 </tr>
                 <tr>
                   <td><b>Contact Number:</b></td>
