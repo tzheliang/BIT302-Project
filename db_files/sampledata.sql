@@ -262,3 +262,10 @@ INSERT INTO menuitem (foodName, price, status, image, avgRating, restaurantID)
 VALUES ("Meat Lover Pizza", "15.99", "Available", "./images/pizza_hut/meat-lover-pizza.png", 0, 1);
 INSERT INTO menuitem (foodName, price, status, image, avgRating, restaurantID)
 VALUES ("Bacon Spinach Alfredo Pizza", "15.99", "Available", "./images/pizza_hut/bacon-spinach-alfredo-pizza.png", 0, 1);
+
+UPDATE `Users` SET `address` = 'SS15' WHERE `Users`.`userID` = 1
+UPDATE `Users` SET `address` = 'SS2' WHERE `Users`.`userID` = 2
+UPDATE `Users` SET `address` = 'Bangsar' WHERE `Users`.`userID` = 3
+UPDATE `Users` SET `address` = 'Setapak' WHERE `Users`.`userID` = 4
+UPDATE `Users` SET `address` = 'Section 14' WHERE `Users`.`userID` = 5
+UPDATE `Users` SET `address` = 'Sunway Pyramid' WHERE `Users`.`userID` = 6
