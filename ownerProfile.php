@@ -190,7 +190,7 @@
                 if (!$hasOrder) {
                   echo "
                     <div class='no-orders'>
-                      <h2>You have not made any orders.</h2>
+                      <h2>You have no order for your restaurant.</h2>
                       </div>
                   ";
                 } else {
