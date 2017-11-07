@@ -108,7 +108,7 @@
     <div class="container">
       <div class="top-header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
+          <a href="owner-mainPage.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
         <div class="queries">
           <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p>
@@ -127,7 +127,7 @@
                  echo "<li><a href='register.html'>Register</a></li>";
                }
                else {
-                 echo "<li><a href='profile.php'>Logged in as ".$_SESSION['username']."</a></li>";
+                 echo "<li><a href='ownerProfile.php'>Logged in as ".$_SESSION['username']."</a></li>";
                  echo "<li><h3>|</h3></li>";
                  echo "<li><a href='signout.php'>Sign Out</a></li>";
                }
@@ -190,7 +190,7 @@
                 if (!$hasOrder) {
                   echo "
                     <div class='no-orders'>
-                      <h2>You have not made any orders.</h2>
+                      <h2>You have no order for your restaurant.</h2>
                       </div>
                   ";
                 } else {
