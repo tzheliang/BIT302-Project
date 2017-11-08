@@ -18,6 +18,10 @@
     $hasOrder = 1;
   }
 
+  $sql4 = "SELECT restaurantName, location, phoneNumber FROM restaurant WHERE ownerID = '$ownerID'";
+  $result = mysqli_query($con, $sql4);
+  $restaurantInfo = mysqli_fetch_assoc($result);
+
   function getRestaurantInfo($ownerID, $con) {
     $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
     $result2 = mysqli_query($con, $sql2);
@@ -166,8 +170,16 @@
                   <td><?php echo $_SESSION['contactNumber']; ?></td>
                 </tr>
                 <tr>
+                  <td><b>Restaurant Name:</b></td>
+                  <td><?php echo $restaurantInfo['restaurantName']; ?></td>
+                </tr>
+                <tr>
                   <td><b>Restaurant Area:</b></td>
-                  <td><?php echo $_SESSION['address']; ?></td>
+                  <td><?php echo $restaurantInfo['location']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Restaurant Number:</b></td>
+                  <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
                 </tr>
               </table>
             </div>
