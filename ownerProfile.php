@@ -250,49 +250,10 @@
                         }
                       }
                       ?>
-              <!-- <table class="table table-hover">
-                <tr>
-                  <th>Order no.</th>
-                  <th>Order Date</th>
-                  <th>Total Price</th>
-                  <th>Restaurant</th>
-                  <th>Delivery Status</th>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>12/02/2017</td>
-                  <td>12.99</td>
-                  <td>pizza hut</td>
-                  <td>deliverd</td>
-                </tr>
-              </table>
-              <div class="panel-group">
-                <div class="panel panel-default">
-                  <div id='order1' class="panel-heading" href='#collapse1' data-toggle='collapse'>
-                    <p>Ordered Items List</p>
-                    <i class="fa fa-chevron-circle-down pull-right"></i>
-                    <div class='clearfix'></div>
-                  </div>
-                  <div id="collapse1" class="panel-collapse collapse">
-                    <div class="panel-body">Panel Body</div>
-                    <div class="panel-body">Panel Footer</div>
-                  </div>
-                </div>
-              </div>
-              <table class="table table-hover">
-                <tr>
-                  <th>Order no.</th>
-                  <th>Order Date</th>
-                  <th>Total Price</th>
-                  <th>Restaurant</th>
-                  <th>Delivery Status</th>
-                </tr>
-              </table> -->
             </div>
           </div>
-          </div>
-        <a class="acount-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
         </div>
+        <a class="acount-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
       </div>
     </div>
   </div>
