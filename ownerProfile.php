@@ -40,7 +40,7 @@
 <html>
 
 <head>
-  <title><?php echo $_SESSION['firstName']?>'s Profile</title>
+  <title><?php echo $_SESSION['firstName']?>'s Business Profile</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -162,12 +162,12 @@
                   <td><?php echo $_SESSION['email']; ?></td>
                 </tr>
                 <tr>
-                  <td><b>Restaurant Area:</b></td>
-                  <td><?php echo $_SESSION['address']; ?></td>
-                </tr>
-                <tr>
                   <td><b>Contact Number:</b></td>
                   <td><?php echo $_SESSION['contactNumber']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Restaurant Area:</b></td>
+                  <td><?php echo $_SESSION['address']; ?></td>
                 </tr>
               </table>
             </div>
