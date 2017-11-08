@@ -22,12 +22,20 @@
   $result4 = mysqli_query($con, $sql4);
   $restaurantInfo = mysqli_fetch_assoc($result4);
 
-  function getRestaurantInfo($ownerID, $con) {
-    $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
+  // function getRestaurantInfo($ownerID, $con) {
+  //   $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
+  //   $result2 = mysqli_query($con, $sql2);
+  //   $row2 = mysqli_fetch_assoc($result2);
+  //   $restaurantArray = array('restaurantName'=>$row2['restaurantName'], 'location'=> $row2['location']);
+  //   return $restaurantArray;
+  // }
+
+  function getCustomerInfo($customerID, $con) {
+    $sql2 = "SELECT firstName, lastName, address, contactNumber FROM users where userID = '$customerID'";
     $result2 = mysqli_query($con, $sql2);
     $row2 = mysqli_fetch_assoc($result2);
-    $restaurantArray = array('restaurantName'=>$row2['restaurantName'], 'location'=> $row2['location']);
-    return $restaurantArray;
+    $customerArray = array('customerName'=>$row2['firstName']." ".$row2['lastName'], 'address'=> $row2['address'], 'contactNumber'=>$row2['contactNumber']);
+    return $customerArray;
   }
 
   function getFoodInfo($orderID, $con) {
@@ -38,6 +46,8 @@
     }
     return $foodArray;
   }
+
+  $options = array('Not Delivered', 'Delivered');
 
 ?>
 <!DOCTYPE html>
@@ -181,6 +191,7 @@
                   <td><b>Restaurant Number:</b></td>
                   <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
                 </tr>
+                <a class="owner-manage-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
               </table>
             </div>
           </div>
@@ -208,27 +219,38 @@
                 } else {
                   $orderCount = 0;
                   while ($row = mysqli_fetch_assoc($result)) {
-                    $restaurantArray = getRestaurantInfo($row['ownerID'], $con);
+                    $customerArray = getCustomerInfo($row['customerID'], $con);
                     $collapseDivID = "order".$row['orderID'];
                     $divID = "collapse".$row['orderID'];
                     $divIDTarget = "#".$divID;
                     echo "
-                      <table class='table table-hover profile-table'>
+                      <table class='table table-hover profile-table' id=".$row['orderID'].">
                         <tr>
                           <th>Order no.</th>
                           <th>Order Date</th>
                           <th>Total Price</th>
-                          <th>Restaurant</th>
-                          <th>Restaurant Location</th>
+                          <th>Customer Name</th>
+                          <th>Customer Address</th>
+                          <th>Customer Contact Info</th>
                           <th>Delivery Status</th>
+                          <th></th>
                         </tr>
                         <tr>
                           <td>".++$orderCount."</td>
                           <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
                           <td>".$row['totalPrice']."</td>
-                          <td>".$restaurantArray['restaurantName']."</td>
-                          <td>".$restaurantArray['location']."</td>
-                          <td>".$row['deliveryStatus']."</td>
+                          <td>".$customerArray['customerName']."</td>
+                          <td>".$customerArray['address']."</td>
+                          <td>".$customerArray['contactNumber']."</td>
+                          <td>
+                          <select>";
+                          foreach ($options as $option) {
+                            $selected = $row['deliveryStatus'] == $option ? 'selected' : '';
+                            echo "<option ".$selected.">".$option."</option>";
+                          }
+                          echo "</select>
+                          </td>
+                          <td><input type='button' value='Update' class='update-btn'/></td>
                         </tr>
                       </table>
                       <div class='panel-group'>
@@ -265,7 +287,6 @@
             </div>
           </div>
         </div>
-        <a class="acount-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
       </div>
     </div>
   </div>
@@ -300,19 +321,21 @@
         $(this).find('i').toggleClass("fa-chevron-circle-down");
       });
     });
-    //   console.log(div);
-    //   div.click(function() {
-    //     div.find("i").toggleClass("fa-chevron-circle-down");
-    //     // if (div.find("i").hasClass('fa-chevron-circle-down')) {
-    // //       div.find("i").removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
-    // //       console.log('one');
-    // //     } else {
-    // //       div.find("i").addClass('fa-chevron-circle-down').removeClass('fa-chevron-circle-up');
-    // //       console.log('two');
-    // //     }
-    //   });
 
-
+    $(document).ready(function () {
+      $(".update-btn").click(function() {
+        $.ajax({
+          type: 'POST',
+          url: 'updateStatus.php',
+          data: {
+            update: $(this).closest('table').attr('id'),
+            value: $(this).closest('table').find('select').val()
+          }
+        })
+        .done(function() { alert("Status Successfully Updated."); })
+        .fail(function() { alert("Status not updated."); })
+      });
+    });
 
   </script>
   <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>

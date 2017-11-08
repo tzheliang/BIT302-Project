@@ -1619,7 +1619,6 @@ i.mail{
 	color: #FFF;
 	font-size: 1em;
 	padding: 0.7em 1.2em;
-	margin-bottom: 1em;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1630,6 +1629,36 @@ i.mail{
 .acount-btn:hover, .login-right input[type="submit"]:hover{
 	background:#5BBD50;
 	text-decoration:none;
+	color:#fff;
+}
+.owner-manage-btn {
+	background: #E24425;
+	color: #FFF;
+	font-size: 1em;
+	padding: 0.7em 1.2em;
+	float: right;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	text-transform: uppercase;
+}
+.owner-manage-btn:hover, .login-right input[type="submit"]:hover{
+	background:#5BBD50;
+	text-decoration:none;
+	color:#fff;
+}
+.update-btn {
+	transition: 0.5s all;
+	background: #E24425;
+	color: #FFF;
+	border: none;
+	padding: 0.2em 0.9em;
+	font-weight: 500;
+}
+.update-btn:hover {
+	background:#5BBD50;
 	color:#fff;
 }
 .login-right form {
