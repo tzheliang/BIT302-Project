@@ -19,8 +19,8 @@
   }
 
   $sql4 = "SELECT restaurantName, location, phoneNumber FROM restaurant WHERE ownerID = '$ownerID'";
-  $result = mysqli_query($con, $sql4);
-  $restaurantInfo = mysqli_fetch_assoc($result);
+  $result4 = mysqli_query($con, $sql4);
+  $restaurantInfo = mysqli_fetch_assoc($result4);
 
   function getRestaurantInfo($ownerID, $con) {
     $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
