@@ -7,8 +7,8 @@
   $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
 
-  $customerID = $_SESSION['userID'];
-  $sql = "SELECT * FROM foodorder WHERE customerID = '$customerID'";
+  $ownerID = $_SESSION['userID'];
+  $sql = "SELECT * FROM foodorder WHERE ownerID = '$ownerID'";
 
   $result = mysqli_query($con, $sql);
   $counter = mysqli_num_rows($result);
@@ -147,7 +147,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Your Personal Information</b></span>
+              <span><b>Your Business Information</b></span>
             </h4>
           </div>
           <div>
@@ -181,7 +181,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Order Booking</b></span>
+              <span><b>Your Order Bookings</b></span>
             </h4>
           </div>
           <div>
