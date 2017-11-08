@@ -25,7 +25,7 @@
     } else {
       $orderID = $rowCount+= 1;
     }
-    $sql3 = "INSERT INTO foodorder(orderID, deliveryStatus, totalPrice, customerID, ownerID) VALUES ('$orderID','Not Delivered', '$totalPrice', '$customerID', '$ownerID')";
+    $sql3 = "INSERT INTO foodorder(orderID, deliveryStatus, totalPrice, customerID, ownerID) VALUES ('$orderID','Preparing', '$totalPrice', '$customerID', '$ownerID')";
     if (mysqli_query($con, $sql3)) {
       foreach ($_SESSION['cart'] as $item) {
         echo $item['item'];

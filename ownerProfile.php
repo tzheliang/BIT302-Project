@@ -47,7 +47,7 @@
     return $foodArray;
   }
 
-  $options = array('Not Delivered', 'Delivered');
+  $options = array('Preparing', 'Collected', 'Delivered', 'Cancelled');
 
 ?>
 <!DOCTYPE html>
@@ -191,8 +191,8 @@
                   <td><b>Restaurant Number:</b></td>
                   <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
                 </tr>
-                <a class="owner-manage-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
               </table>
+              <a class="owner-manage-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
             </div>
           </div>
         </div>
