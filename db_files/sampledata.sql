@@ -12,8 +12,8 @@ INTO
 VALUES(
   'pizzahut',
   'pizza',
-  'pizza',
-  'hut',
+  'Richard',
+  'Tan',
   'pizzahutmy@mail.com',
   '012-5201314',
   0
@@ -33,8 +33,8 @@ INTO
 VALUES(
   'subway',
   'subway',
-  'sub',
-  'way',
+  'Ronald',
+  'Johnson',
   'subway@mail.com',
   '012-3456789',
   0
@@ -75,8 +75,8 @@ INTO
 VALUES(
   'papajohns',
   'papajohns',
-  'Papa',
-  'Johns',
+  'Cory',
+  'Maxson',
   'papajohns@mail.com',
   '013-5791113',
   0
@@ -96,8 +96,8 @@ INTO
 VALUES(
   'dominos',
   'dominos',
-  'Dominos',
-  'Pizza',
+  'Robert',
+  'Baratheon',
   'dominos@mail.com',
   '012-4681012',
   0
@@ -117,8 +117,8 @@ INTO
 VALUES(
   'kfc',
   'kfc',
-  'Kentucky',
-  'Fried Chicken',
+  'Eddard',
+  'Stark',
   'kfc@mail.com',
   '011-1111111',
   0
@@ -263,9 +263,11 @@ VALUES ("Meat Lover Pizza", "15.99", "Available", "./images/pizza_hut/meat-lover
 INSERT INTO menuitem (foodName, price, status, image, avgRating, restaurantID)
 VALUES ("Bacon Spinach Alfredo Pizza", "15.99", "Available", "./images/pizza_hut/bacon-spinach-alfredo-pizza.png", 0, 1);
 
+/* This part no need already ah
 UPDATE `Users` SET `address` = 'SS15' WHERE `Users`.`userID` = 1
 UPDATE `Users` SET `address` = 'SS2' WHERE `Users`.`userID` = 2
 UPDATE `Users` SET `address` = 'Bangsar' WHERE `Users`.`userID` = 3
 UPDATE `Users` SET `address` = 'Setapak' WHERE `Users`.`userID` = 4
 UPDATE `Users` SET `address` = 'Section 14' WHERE `Users`.`userID` = 5
 UPDATE `Users` SET `address` = 'Sunway Pyramid' WHERE `Users`.`userID` = 6
+*/

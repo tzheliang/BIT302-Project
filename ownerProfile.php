@@ -7,8 +7,8 @@
   $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
 
-  $customerID = $_SESSION['userID'];
-  $sql = "SELECT * FROM foodorder WHERE customerID = '$customerID'";
+  $ownerID = $_SESSION['userID'];
+  $sql = "SELECT * FROM foodorder WHERE ownerID = '$ownerID'";
 
   $result = mysqli_query($con, $sql);
   $counter = mysqli_num_rows($result);
@@ -17,6 +17,10 @@
   } else {
     $hasOrder = 1;
   }
+
+  $sql4 = "SELECT restaurantName, location, phoneNumber FROM restaurant WHERE ownerID = '$ownerID'";
+  $result4 = mysqli_query($con, $sql4);
+  $restaurantInfo = mysqli_fetch_assoc($result4);
 
   function getRestaurantInfo($ownerID, $con) {
     $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
@@ -40,7 +44,7 @@
 <html>
 
 <head>
-  <title><?php echo $_SESSION['firstName']?>'s Profile</title>
+  <title><?php echo $_SESSION['firstName']?>'s Business Profile</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -147,7 +151,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Your Personal Information</b></span>
+              <span><b>Your Business Information</b></span>
             </h4>
           </div>
           <div>
@@ -162,12 +166,20 @@
                   <td><?php echo $_SESSION['email']; ?></td>
                 </tr>
                 <tr>
-                  <td><b>Restaurant Area:</b></td>
-                  <td><?php echo $_SESSION['address']; ?></td>
-                </tr>
-                <tr>
                   <td><b>Contact Number:</b></td>
                   <td><?php echo $_SESSION['contactNumber']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Restaurant Name:</b></td>
+                  <td><?php echo $restaurantInfo['restaurantName']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Restaurant Area:</b></td>
+                  <td><?php echo $restaurantInfo['location']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Restaurant Number:</b></td>
+                  <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
                 </tr>
               </table>
             </div>
@@ -181,7 +193,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Order Booking</b></span>
+              <span><b>Your Order Bookings</b></span>
             </h4>
           </div>
           <div>
@@ -250,49 +262,10 @@
                         }
                       }
                       ?>
-              <!-- <table class="table table-hover">
-                <tr>
-                  <th>Order no.</th>
-                  <th>Order Date</th>
-                  <th>Total Price</th>
-                  <th>Restaurant</th>
-                  <th>Delivery Status</th>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>12/02/2017</td>
-                  <td>12.99</td>
-                  <td>pizza hut</td>
-                  <td>deliverd</td>
-                </tr>
-              </table>
-              <div class="panel-group">
-                <div class="panel panel-default">
-                  <div id='order1' class="panel-heading" href='#collapse1' data-toggle='collapse'>
-                    <p>Ordered Items List</p>
-                    <i class="fa fa-chevron-circle-down pull-right"></i>
-                    <div class='clearfix'></div>
-                  </div>
-                  <div id="collapse1" class="panel-collapse collapse">
-                    <div class="panel-body">Panel Body</div>
-                    <div class="panel-body">Panel Footer</div>
-                  </div>
-                </div>
-              </div>
-              <table class="table table-hover">
-                <tr>
-                  <th>Order no.</th>
-                  <th>Order Date</th>
-                  <th>Total Price</th>
-                  <th>Restaurant</th>
-                  <th>Delivery Status</th>
-                </tr>
-              </table> -->
             </div>
           </div>
-          </div>
-        <a class="acount-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
         </div>
+        <a class="acount-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
       </div>
     </div>
   </div>
