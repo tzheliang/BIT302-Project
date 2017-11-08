@@ -12,8 +12,8 @@ INTO
 VALUES(
   'pizzahut',
   'pizza',
-  'pizza',
-  'hut',
+  'Richard',
+  'Tan',
   'pizzahutmy@mail.com',
   '012-5201314',
   0
@@ -33,8 +33,8 @@ INTO
 VALUES(
   'subway',
   'subway',
-  'sub',
-  'way',
+  'Ronald',
+  'Johnson',
   'subway@mail.com',
   '012-3456789',
   0
@@ -75,8 +75,8 @@ INTO
 VALUES(
   'papajohns',
   'papajohns',
-  'Papa',
-  'Johns',
+  'Cory',
+  'Maxson',
   'papajohns@mail.com',
   '013-5791113',
   0
@@ -96,8 +96,8 @@ INTO
 VALUES(
   'dominos',
   'dominos',
-  'Dominos',
-  'Pizza',
+  'Robert',
+  'Baratheon',
   'dominos@mail.com',
   '012-4681012',
   0
@@ -117,8 +117,8 @@ INTO
 VALUES(
   'kfc',
   'kfc',
-  'Kentucky',
-  'Fried Chicken',
+  'Eddard',
+  'Stark',
   'kfc@mail.com',
   '011-1111111',
   0
