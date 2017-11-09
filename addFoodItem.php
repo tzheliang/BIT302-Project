@@ -17,14 +17,24 @@
     $foodName = $_POST['foodName'];
     $price = $_POST['price'];
     $status = $_POST['status'];
-    $image = $_POST['image'];
+
+    function getRestaurantInfo($ownerID, $con) {
+      $sql3 = "SELECT restaurantID FROM restaurant where ownerID = '$ownerID'";
+      $result1 = mysqli_query($con, $sql3);
+      $row2 = mysqli_fetch_assoc($result1);
+      $restaurantArray = array('restaurantID'=> $row2['restaurantID']);
+      return $restaurantArray;
+    }
 
     if ($passed){
-      $sql2 = "INSERT INTO Users (foodID, foodName, price, status, image, avgRating, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$image')";
-      if (mysqli_query($con, $sql2)){
-        header("location: owner-mainPage.html");
-      } else {
-        echo "Cannot perform query";
+      while ($row = mysqli_fetch_assoc($result)) {
+        $restaurantArray = getRestaurantInfo($row['ownerID'], $con);
+        $sql2 = "INSERT INTO MenuItem (foodID, foodName, price, status, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$restaurantArray['restaurantID']')";
+        if (mysqli_query($con, $sql2)){
+          header("location: owner-mainPage.html");
+        } else {
+          echo "Cannot perform query";
+        }
       }
     }
   } else {
