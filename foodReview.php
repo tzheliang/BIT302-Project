@@ -8,7 +8,8 @@
   $con = new mysqli($servername, $username, $password, $dbname);
 
   $customerID = $_SESSION['userID'];
-  $orderID = 1;
+  $orderID = $_POST['order-id'];
+  $_SESSION['order-id'] = $orderID;
 
   function getOrderInfo($orderID, $con) {
     $sql = "SELECT r.restaurantName, o.timestamp FROM restaurant r, foodorder o WHERE o.ownerID = r.ownerID AND o.orderID = '$orderID'";
@@ -91,12 +92,6 @@
 		</div>
 		<div class="menu-bar">
 			<div class="container">
-				<div class="top-menu">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<div class="clearfix"></div>
-					</ul>
-				</div>
 				<div class="login-section">
 					<ul>
 						<?php
@@ -170,8 +165,9 @@
                 <p>General comments (400 characters max)</p>
 								<textarea placeholder="Comments" maxlength="400" name='comments'></textarea>
 								<div class="clearfix"> </div>
-								<div class="sub-button wow swing animated" data-wow-delay="0.4s">
+								<div class="sub-button" data-wow-delay="0.4s">
 									<input name="submit" type="submit" value="Submit Feedback">
+                  <input type="button" value="Return to Profile Page" onClick={window.history.back();} />
 								</div>
 							</div>
 						</form>

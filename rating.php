@@ -7,7 +7,7 @@
   $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
 
-  $orderID = 1;
+  $orderID = $_SESSION['order-id'];
 
   if (isset($_POST['check'])) {
     unset($_SESSION['reviewed']);
@@ -37,6 +37,13 @@
       $sql3 = "INSERT INTO rating(ratingValue, feedBackID, foodID) VALUES('$value', '$feedBackID', '$food')";
       mysqli_query($con, $sql3);
       $counter++;
+
+      $sql4 = "SELECT avg(ratingValue) AS avgValue FROM rating WHERE foodID = '$food'";
+      $result4 = mysqli_query($con, $sql4);
+      $row = mysqli_fetch_assoc($result4);
+      $avgValue = $row['avgValue'];
+      $sql5 = "UPDATE menuitem set avgRating = '$avgValue' WHERE foodID = '$food'";
+      mysqli_query($con, $sql5);
     }
 
       $_SESSION['reviewed'] = 1;

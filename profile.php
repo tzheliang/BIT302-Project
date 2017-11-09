@@ -227,7 +227,7 @@
                     $collapseDivID = "order".$row['orderID'];
                     $divID = "collapse".$row['orderID'];
                     $divIDTarget = "#".$divID;
-                    if (!checkReviewed($row['orderID'], $con)) {
+                    if (!checkReviewed($row['orderID'], $con) && $row['deliveryStatus'] == 'Delivered') {
                       $disabled = '';
                     } else {
                       $disabled = 'disabled';
@@ -250,7 +250,12 @@
                           <td>".$restaurantArray['restaurantName']."</td>
                           <td>".$restaurantArray['location']."</td>
                           <td>".$row['deliveryStatus']."</td>
-                          <td><input type='button' value='Rate Order' class='update-btn' ".$disabled."/></td>
+                          <td>
+                            <form action='foodReview.php' method='POST'>
+                              <input type='submit' name='submit' value='Rate Order' class='update-btn' ".$disabled."/>
+                              <input type='hidden' name='order-id' value=".$row['orderID']." />
+                            </form>
+                          </td>
                         </tr>
                       </table>
                       <div class='panel-group'>
