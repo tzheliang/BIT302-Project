@@ -47,6 +47,13 @@
     return $foodArray;
   }
 
+  function checkReviewed($orderID, $con) {
+    $sql4 = "SELECT count(*) AS count FROM feedback f, rating r where f.feedBackID = r.feedbackID and f.orderID = '$orderID'";
+    $result4 = mysqli_query($con, $sql4);
+    $row = mysqli_fetch_assoc($result4);
+    return $row['count'] >= 1;
+  }
+
   $options = array('Preparing', 'Collected', 'Delivered', 'Cancelled');
 
 ?>
@@ -223,6 +230,11 @@
                     $collapseDivID = "order".$row['orderID'];
                     $divID = "collapse".$row['orderID'];
                     $divIDTarget = "#".$divID;
+                    if (checkReviewed($row['orderID'], $con)) {
+                      $disabled = '';
+                    } else {
+                      $disabled = 'disabled';
+                    }
                     echo "
                       <table class='table table-hover profile-table' id=".$row['orderID'].">
                         <tr>
@@ -233,6 +245,7 @@
                           <th>Customer Address</th>
                           <th>Customer Contact Info</th>
                           <th>Delivery Status</th>
+                          <th></th>
                           <th></th>
                         </tr>
                         <tr>
@@ -250,7 +263,11 @@
                           }
                           echo "</select>
                           </td>
-                          <td><input type='button' value='Update' class='update-btn'/></td>
+                          <form action='review.php' method='post'>
+                            <td><input type='button' value='Update' class='update-btn updatebtn'/></td>
+                            <td><input type='submit' value='Check Review' class='update-btn' ".$disabled."/></td>
+                            <input type='hidden' name='order-id' value=".$row['orderID']." />
+                          </form>
                         </tr>
                       </table>
                       <div class='panel-group'>
@@ -323,7 +340,7 @@
     });
 
     $(document).ready(function () {
-      $(".update-btn").click(function() {
+      $(".updatebtn").click(function() {
         $.ajax({
           type: 'POST',
           url: 'updateStatus.php',
