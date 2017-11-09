@@ -35,6 +35,13 @@
     return $foodArray;
   }
 
+  function checkReviewed($orderID, $con) {
+    $sql4 = "SELECT count(*) AS count FROM feedback f, rating r where f.feedBackID = r.feedbackID and f.orderID = '$orderID'";
+    $result4 = mysqli_query($con, $sql4);
+    $row = mysqli_fetch_assoc($result4);
+    return $row['count'] >= 1;
+  }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -88,6 +95,10 @@
     $check = isset($_SESSION['payment']) ? 1 : 0;
     echo $check;
     ?> ;
+    var check2 = <?php
+    $check2 = isset($_SESSION['reviewed']) ? 1 : 0;
+    echo $check2;
+    ?> ;
     if (check) {
       console.log(check);
       alert("Payment Successful. Thank you for choosing us.");
@@ -96,6 +107,15 @@
       $.ajax({
         type: 'POST',
         url: 'payment.php',
+        data: {check: 0}
+      });
+    }
+    if (check2) {
+      console.log(check2);
+      alert("Review Sent. Thank you!");
+      $.ajax({
+        type: 'POST',
+        url: 'rating.php',
         data: {check: 0}
       });
     }
@@ -207,6 +227,11 @@
                     $collapseDivID = "order".$row['orderID'];
                     $divID = "collapse".$row['orderID'];
                     $divIDTarget = "#".$divID;
+                    if (!checkReviewed($row['orderID'], $con)) {
+                      $disabled = '';
+                    } else {
+                      $disabled = 'disabled';
+                    }
                     echo "
                       <table class='table table-hover profile-table'>
                         <tr>
@@ -216,6 +241,7 @@
                           <th>Restaurant</th>
                           <th>Restaurant Location</th>
                           <th>Delivery Status</th>
+                          <th></th>
                         </tr>
                         <tr>
                           <td>".++$orderCount."</td>
@@ -224,6 +250,7 @@
                           <td>".$restaurantArray['restaurantName']."</td>
                           <td>".$restaurantArray['location']."</td>
                           <td>".$row['deliveryStatus']."</td>
+                          <td><input type='button' value='Rate Order' class='update-btn' ".$disabled."/></td>
                         </tr>
                       </table>
                       <div class='panel-group'>
