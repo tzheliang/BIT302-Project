@@ -106,14 +106,6 @@
                 <input type="text" name="price" required>
               </div>
               <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                <span>Food Image</span>
-                <form action="upload.php" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="image" id="image">
-                    <input type="submit" value="Upload Image" name="submit">
-                </form>
-              </div>
-              <div class="wow fadeInLeft" data-wow-delay="0.4s">
                 <label class="control-label">Status</label>
                 <select class="form-control" name="status" required="">
                   <option value="">-Select Food Status-</option>
@@ -129,6 +121,14 @@
               <div class="clearfix"> </div>
             </div>
           </form>
+          <div class="wow fadeInLeft" data-wow-delay="0.4s">
+            <span>Food Image</span>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="image">
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
+          </div>
         </div>
       </div>
     </div>
