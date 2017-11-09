@@ -66,7 +66,7 @@ CREATE TABLE Feedback(
 );
 
 CREATE TABLE Rating(
-  ratingID INT(5) UNIQUE NOT NULL,
+  ratingID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
   ratingValue INT(1) NOT NULL,
   feedbackID INT(5) NOT NULL,
   foodID INT(5) NOT NULL,
