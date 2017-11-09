@@ -66,10 +66,11 @@ CREATE TABLE Feedback(
 );
 
 CREATE TABLE Rating(
-  ratingID INT(5) UNIQUE NOT NULL,
+  ratingID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
   ratingValue INT(1) NOT NULL,
   feedbackID INT(5) NOT NULL,
   foodID INT(5) NOT NULL,
+  PRIMARY KEY(ratingID)
   FOREIGN KEY(feedbackID) REFERENCES Feedback(feedbackID),
   FOREIGN KEY(foodID) REFERENCES MenuItem(foodID)
 );

@@ -88,7 +88,51 @@
   <!-- header-section-ends -->
   <!-- content-section-starts -->
   <div class="content">
-
+    <div class="main">
+      <div class="container">
+        <div class="register">
+          <form action="addFoodItem.php" method="post">
+            <div class="register-top-grid">
+              <ul class="previous">
+                <li><a href="owner-mainPage.html">Back to Main Page</a></li>
+              </ul>
+              <h3>Record New Food Menu</h3>
+              <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                <span>Food Name</span>
+                <input type="text" name="foodName" required>
+              </div>
+              <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                <span>Price</span>
+                <input type="text" name="price" required>
+              </div>
+              <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                <label class="control-label">Status</label>
+                <select class="form-control" name="status" required="">
+                  <option value="">-Select Food Status-</option>
+                  <option value="available">Available</option>
+                  <option value="noStock">Out of Stock</option>
+                </select>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+          <div class="clearfix"> </div>
+            <div class="register-but">
+              <input type="submit" value="Create" name="submit">
+              <div class="clearfix"> </div>
+            </div>
+          </form>
+          <div class="wow fadeInLeft" data-wow-delay="0.4s">
+            <span>Food Image</span>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="image">
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
   <!-- content-section-ends -->
   <!-- footer-section-starts -->
