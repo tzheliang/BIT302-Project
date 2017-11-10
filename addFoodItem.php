@@ -23,7 +23,7 @@
     if ($passed){
       $sql2 = "INSERT INTO MenuItem (foodID, foodName, price, status, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$restaurantID')";
       if (mysqli_query($con, $sql2)){
-        header("location: owner-mainPage.html");
+        header("location: viewMenu.php");
       } else {
         echo "Cannot perform query";
       }
