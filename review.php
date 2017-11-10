@@ -1,17 +1,45 @@
 <?php
   session_start();
- ?>
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "food4all";
+  $con = new mysqli($servername, $username, $password, $dbname);
+
+  $orderID = $_POST['order-id'];
+  $sql = "SELECT firstName, lastName, email, contactNumber FROM users u, foodorder f WHERE u.userID = f.customerID AND f.orderID = '$orderID'";
+  $result = mysqli_query($con, $sql);
+  $row = mysqli_fetch_assoc($result);
+
+  $customerArray = array('fullname'=> $row['firstName']." ".$row['lastName'], 'email'=>$row['email'], 'contactNumber'=>$row['contactNumber']);
+
+  $sql2 = "SELECT m.foodName, r.ratingValue FROM menuitem m, rating r, foodorder o, feedback f WHERE m.foodID = r.foodID AND r.feedBackID = f.feedBackID AND f.orderID = o.orderID AND o.orderID = '$orderID'";
+  $result2 = mysqli_query($con, $sql2);
+
+  while ($row2 = mysqli_fetch_assoc($result2)) {
+    $foodArray[] = array('foodName'=>$row2['foodName'], 'ratingValue'=>$row2['ratingValue']);
+  }
+
+  $sql3 = "SELECT comments FROM feedback WHERE orderID = '$orderID'";
+  $result3 = mysqli_query($con, $sql3);
+  $row3 = mysqli_fetch_assoc($result3);
+  $comments = $row3['comments'];
+
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>Food4All - Add New Food Item</title>
+  <title>Review</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery.min.js"></script>
+  <script src="./js/jquery-1.9.1.js"></script>
+  <script src="./js/bootstrap.js"></script>
   <!-- Custom Theme files -->
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" media="all"  />
   <!-- Custom Theme files -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="application/x-javascript">
@@ -87,44 +115,80 @@
   </div>
   <!-- header-section-ends -->
   <!-- content-section-starts -->
-  <div class="content">
-    <div class="main">
+  <div class="content review-info">
+    <div class="profile-info">
       <div class="container">
-        <div class="register">
-          <form action="addFoodItem.php" method="post">
-            <div class="register-top-grid">
-              <ul class="previous">
-                <li><a href="owner-mainPage.html">Back to Main Page</a></li>
-              </ul>
-              <h3>Record New Food Menu</h3>
-              <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                <span>Food Name</span>
-                <input type="text" name="foodName" required>
-              </div>
-              <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                <span>Price</span>
-                <input type="text" name="price" required>
-              </div>
-              <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                <label class="control-label">Status</label>
-                <select class="form-control" name="status" required="">
-                  <option value="">-Select Food Status-</option>
-                  <option value="Available">Available</option>
-                  <option value="Out of Stock">Out of Stock</option>
-                </select>
-              </div>
-              <div class="clearfix"> </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span><b>Reviewer Information</b></span>
+            </h4>
+          </div>
+          <div>
+            <div class="panel-body article-wrapper">
+              <table class="info-table">
+                <tr>
+                  <td><b>Customer Name:</b></td>
+                  <td><?php echo $customerArray['fullname']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Customer Email:</b></td>
+                  <td><?php echo $customerArray['email']; ?></td>
+                </tr>
+                <tr>
+                  <td><b>Contact Number:</b></td>
+                  <td><?php echo $customerArray['contactNumber']; ?></td>
+                </tr>
+              </table>
             </div>
-          <div class="clearfix"> </div>
-            <div class="register-but">
-              <input type="submit" value="Create" name="submit">
-              <div class="clearfix"> </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-    <div class="clearfix"></div>
+    <!-- reuse bottom code for order booking -->
+    <div class="item-rating">
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span><b>Menu Item Ratings</b></span>
+            </h4>
+          </div>
+          <div>
+            <ul class="list-group">
+              <?php
+                foreach($foodArray as $food) {
+                  echo "
+                  <li class='list-group-item'>
+                    <p>Food Name: ".$food['foodName']."</p>
+                    <p>Rating: ".$food['ratingValue']." stars</p>
+                  </li>";
+                }
+              ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="order-summary">
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span><b>Customer Comment</b></span>
+            </h4>
+          </div>
+          <div>
+            <div class="panel-body article-wrapper table-responsive">
+              <?php
+                echo "<p>".$comments."</p>"
+              ?>
+            </div>
+          </div>
+        </div>
+        <input class='update-btn btn-update' type="button" value="Return to Profile Page" onClick={window.history.back();} />
+      </div>
+    </div>
   </div>
   <!-- content-section-ends -->
   <!-- footer-section-starts -->

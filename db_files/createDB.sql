@@ -57,7 +57,7 @@ CREATE TABLE OrderItem(
 );
 
 CREATE TABLE Feedback(
-  feedBackID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
+  feedbackID INT(5) UNIQUE NOT NULL AUTO_INCREMENT,
   timestamp TIMESTAMP NOT NULL,
   comments VARCHAR(400) NOT NULL,
   orderID INT(5),
@@ -70,7 +70,7 @@ CREATE TABLE Rating(
   ratingValue INT(1) NOT NULL,
   feedbackID INT(5) NOT NULL,
   foodID INT(5) NOT NULL,
-  PRIMARY KEY(ratingID)
+  PRIMARY KEY(ratingID),
   FOREIGN KEY(feedbackID) REFERENCES Feedback(feedbackID),
   FOREIGN KEY(foodID) REFERENCES MenuItem(foodID)
 );

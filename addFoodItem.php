@@ -8,6 +8,8 @@
   $dbname = "food4all";
   $con = new mysqli($servername, $username, $password, $dbname);
 
+  $restaurantID = $_SESSION['userID'];
+
   $sql = "SELECT * FROM MenuItem";
   $result = mysqli_query($con, $sql);
   // Initialising variables
@@ -17,10 +19,9 @@
     $foodName = $_POST['foodName'];
     $price = $_POST['price'];
     $status = $_POST['status'];
-    $image = $_POST['image'];
 
     if ($passed){
-      $sql2 = "INSERT INTO Users (foodID, foodName, price, status, image, avgRating, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$image')";
+      $sql2 = "INSERT INTO MenuItem (foodID, foodName, price, status, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$restaurantID')";
       if (mysqli_query($con, $sql2)){
         header("location: owner-mainPage.html");
       } else {
