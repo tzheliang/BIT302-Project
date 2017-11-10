@@ -54,7 +54,7 @@
     <div class="container">
       <div class="top-header">
         <div class="logo">
-          <a href="owner-mainPage.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
+          <a href="viewMenu.php"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
         <div class="queries">
           <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p>
@@ -88,7 +88,7 @@
   <!-- header-section-ends -->
   <!-- content-section-starts -->
   <div class="content">
-    
+
     <a class="owner-manage-btn" href="owner-addfooditem.html">Add New Menu</a>
   </div>
   <!-- content-section-ends -->

@@ -129,7 +129,7 @@
     <div class="container">
       <div class="top-header">
         <div class="logo">
-          <a href="owner-mainPage.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
+          <a href="viewMenu.php"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
         <div class="queries">
           <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p>
@@ -199,7 +199,7 @@
                   <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
                 </tr>
               </table>
-              <a class="owner-manage-btn" href="owner-mainPage.html">Proceed to your restaurant</a>
+              <a class="owner-manage-btn" href="viewMenu.php">Proceed to your restaurant</a>
             </div>
           </div>
         </div>
