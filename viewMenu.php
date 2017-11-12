@@ -1,5 +1,26 @@
 <?php
   session_start();
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "food4all";
+  $con = new mysqli($servername, $username, $password, $dbname);
+
+  $ownerID = $_SESSION['userID'];
+  $restaurantID = $_POST['restaurantID'];
+  $sql = "SELECT * FROM MenuItem WHERE restaurantID = '$restaurantID'";
+
+  $result = mysqli_query($con, $sql);
+  $counter = mysqli_num_rows($result);
+  if ($counter == 0) {
+    $hasMenu = 0;
+  } else {
+    $hasMenu = 1;
+  }
+
+  $options = array('In Stock', 'Out of Stock');
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -88,8 +109,94 @@
   <!-- header-section-ends -->
   <!-- content-section-starts -->
   <div class="content">
-
-    <a class="owner-manage-btn" href="owner-addfooditem.html">Add New Menu</a>
+    <a class="acount-btn" href="owner-addfooditem.html">Add New Menu</a>
+    <div class="order-summary">
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span><b>Your Menu Items</b></span>
+            </h4>
+          </div>
+          <div>
+            <div class="panel-body article-wrapper table-responsive">
+              <!--
+              <?php
+                if (!$hasMenu) {
+                  echo "
+                    <div class='no-orders'>
+                      <h2>You have no menu item for your restaurant.</h2>
+                      </div>
+                  ";
+                } else {
+                  $menuCount = 0;
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $collapseDivID = "restaurant".$row['restaurantID'];
+                    $divID = "collapse".$row['restaurantID'];
+                    $divIDTarget = "#".$divID;
+                    echo "
+                      <table class='table table-hover profile-table' id=".$row['restaurantID'].">
+                        <tr>
+                          <th>Item no.</th>
+                          <th>Date Created</th>
+                          <th>Item Price</th>
+                          <th>Food Name</th>
+                          <th>Food Image</th>
+                          <th>Food Rating</th>
+                          <th>Food Status</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>".++$menuCount."</td>
+                          <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
+                          <td>".$row['price']."</td>
+                          <td>".$row['foodName']."</td>
+                          <td>".$row['image']."</td>
+                          <td>".$row['avgRating']."</td>
+                          <td>
+                          <select>";
+                          foreach ($options as $option) {
+                            $selected = $row['status'] == $option ? 'selected' : '';
+                            echo "<option ".$selected.">".$option."</option>";
+                          }
+                          echo "</select>
+                          </td>
+                          <form action='review.php' method='post'>
+                            <td><input type='button' value='Update' class='update-btn updatebtn'/></td>
+                          </form>
+                        </tr>
+                      </table>
+                      <div class='panel-group'>
+                        <div class='panel panel-default'>
+                          <div id=".$divID." class='panel-collapse collapse order-panel'>";
+                          foreach ($foodArray as $food) {
+                            echo "<div class='panel-body'>";
+                            echo "<p>";
+                            echo "Food name: ";
+                            echo $food['foodName'];
+                            echo "</p>";
+                            echo "<p>";
+                            echo "Quantity: ";
+                            echo $food['quantity'];
+                            echo "</p>";
+                            echo "<p>";
+                            echo "Price: RM";
+                            echo $food['price'];
+                            echo "</p>";
+                            echo "</div>";
+                          }
+                          echo "
+                          </div></div></div>";
+                        }
+                      }
+                      ?>
+                    -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- content-section-ends -->
   <!-- footer-section-starts -->
@@ -115,6 +222,29 @@
       });
 
     });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".menu-panel").click(function() {
+        $(this).find('i').toggleClass("fa-chevron-circle-down");
+      });
+    });
+
+    $(document).ready(function () {
+      $(".updatebtn").click(function() {
+        $.ajax({
+          type: 'POST',
+          url: 'updateStatus.php',
+          data: {
+            update: $(this).closest('table').attr('id'),
+            value: $(this).closest('table').find('select').val()
+          }
+        })
+        .done(function() { alert("Status Successfully Updated."); })
+        .fail(function() { alert("Status not updated."); })
+      });
+    });
+
   </script>
   <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
