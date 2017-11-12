@@ -140,9 +140,13 @@
 													<div class='food-price'>
 														<p class='food-item-price'>Price : RM".$menuList[$j]['price']."</p>
 														<p>Status : ".$menuList[$j]['status']."</p>
-														<p>Average Rating: ".$menuList[$j]['avgRating']."/5 stars</p>
-														<a class='cart-btn' href='javascript:;' onclick={addToCart(".$id.")}>Add to Cart</a>
-													</div>
+														<p>Average Rating: ".$menuList[$j]['avgRating']."/5 stars</p>";
+															if ($menuList[$j]['status'] == 'Available') {
+																echo "<a class='cart-btn' href='javascript:;' onclick={addToCart(".$id.")}>Add to Cart</a>";
+															} else {
+																echo "<input type='button' class='cart-btn' disabled value='Add to Cart'/>";
+															}
+														echo "</div>
 												</div>
 											</div>
 										</li>";
