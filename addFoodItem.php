@@ -19,11 +19,12 @@
     $foodName = $_POST['foodName'];
     $price = $_POST['price'];
     $status = $_POST['status'];
+    $image = $_POST['image'];
 
     if ($passed){
-      $sql2 = "INSERT INTO MenuItem (foodID, foodName, price, status, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$restaurantID')";
+      $sql2 = "INSERT INTO MenuItem (foodID, foodName, price, status, image, restaurantID) VALUES('0000', '$foodName', '$price', '$status', '$image', '$restaurantID')";
       if (mysqli_query($con, $sql2)){
-        header("location: owner-mainPage.html");
+        header("location: viewMenu.php");
       } else {
         echo "Cannot perform query";
       }

@@ -54,7 +54,7 @@
     <div class="container">
       <div class="top-header">
         <div class="logo">
-          <a href="owner-mainPage.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
+          <a href="viewMenu.php"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
         <div class="queries">
           <p>Questions? Call us !<span>+60125201314 </span><label>(10AM to 10PM)</label></p>
@@ -94,7 +94,7 @@
           <form action="addFoodItem.php" method="post">
             <div class="register-top-grid">
               <ul class="previous">
-                <li><a href="owner-mainPage.html">Back to Main Page</a></li>
+                <li><a href="viewMenu.php">Back to Main Page</a></li>
               </ul>
               <h3>Record New Food Menu</h3>
               <div class="wow fadeInLeft" data-wow-delay="0.4s">
@@ -106,7 +106,7 @@
                 <input type="text" name="price" required>
               </div>
               <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                <label class="control-label">Status</label>
+                <span>Status</span>
                 <select class="form-control" name="status" required="">
                   <option value="">-Select Food Status-</option>
                   <option value="Available">Available</option>
@@ -121,6 +121,13 @@
               <div class="clearfix"> </div>
             </div>
           </form>
+          <!--
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+          </form>
+        -->
         </div>
       </div>
     </div>

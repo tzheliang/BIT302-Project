@@ -8,68 +8,31 @@
   $con = new mysqli($servername, $username, $password, $dbname);
 
   $ownerID = $_SESSION['userID'];
-  $sql = "SELECT * FROM foodorder WHERE ownerID = '$ownerID'";
+  $restaurantID = $_POST['restaurantID'];
+  $sql = "SELECT * FROM MenuItem WHERE restaurantID = '$restaurantID'";
 
   $result = mysqli_query($con, $sql);
   $counter = mysqli_num_rows($result);
   if ($counter == 0) {
-    $hasOrder = 0;
+    $hasMenu = 0;
   } else {
-    $hasOrder = 1;
+    $hasMenu = 1;
   }
 
-  $sql4 = "SELECT restaurantName, location, phoneNumber FROM restaurant WHERE ownerID = '$ownerID'";
-  $result4 = mysqli_query($con, $sql4);
-  $restaurantInfo = mysqli_fetch_assoc($result4);
+  $options = array('In Stock', 'Out of Stock');
 
-  // function getRestaurantInfo($ownerID, $con) {
-  //   $sql2 = "SELECT restaurantName, location FROM restaurant where ownerID = '$ownerID'";
-  //   $result2 = mysqli_query($con, $sql2);
-  //   $row2 = mysqli_fetch_assoc($result2);
-  //   $restaurantArray = array('restaurantName'=>$row2['restaurantName'], 'location'=> $row2['location']);
-  //   return $restaurantArray;
-  // }
-
-  function getCustomerInfo($customerID, $con) {
-    $sql2 = "SELECT firstName, lastName, address, contactNumber FROM users where userID = '$customerID'";
-    $result2 = mysqli_query($con, $sql2);
-    $row2 = mysqli_fetch_assoc($result2);
-    $customerArray = array('customerName'=>$row2['firstName']." ".$row2['lastName'], 'address'=> $row2['address'], 'contactNumber'=>$row2['contactNumber']);
-    return $customerArray;
-  }
-
-  function getFoodInfo($orderID, $con) {
-    $sql3 = "SELECT f.foodName, f.price, o.quantity FROM menuitem f, orderitem o WHERE f.foodID = o.foodID AND o.orderID = '$orderID'";
-    $result3 = mysqli_query($con, $sql3);
-    while ($row3 = mysqli_fetch_assoc($result3)) {
-      $foodArray[] = array('foodName'=>$row3['foodName'],'price'=>$row3['price'], 'quantity'=>$row3['quantity']);
-    }
-    return $foodArray;
-  }
-
-  function checkReviewed($orderID, $con) {
-    $sql4 = "SELECT count(*) AS count FROM feedback f, rating r where f.feedBackID = r.feedbackID and f.orderID = '$orderID'";
-    $result4 = mysqli_query($con, $sql4);
-    $row = mysqli_fetch_assoc($result4);
-    return $row['count'] >= 1;
-  }
-
-  $options = array('Preparing', 'Collected', 'Delivered', 'Cancelled');
-
-?>
+ ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title><?php echo $_SESSION['firstName']?>'s Business Profile</title>
+  <title>Food4All - Your Store</title>
   <link rel="icon" href="images/Icon.ico" type="image/x-icon">
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="./js/jquery-1.9.1.js"></script>
-  <script src="./js/bootstrap.js"></script>
+  <script src="js/jquery.min.js"></script>
   <!-- Custom Theme files -->
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" media="all"  />
   <!-- Custom Theme files -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="application/x-javascript">
@@ -103,23 +66,6 @@
         }, 1200);
       });
     });
-  </script>
-  <script>
-    var check = <?php
-    $check = isset($_SESSION['payment']) ? 1 : 0;
-    echo $check;
-    ?> ;
-    if (check) {
-      console.log(check);
-      alert("Payment Successful. Thank you for choosing us.");
-      simpleCart.empty();
-      simpleCart.save();
-      $.ajax({
-        type: 'POST',
-        url: 'payment.php',
-        data: {check: 0}
-      });
-    }
   </script>
 </head>
 
@@ -163,122 +109,67 @@
   <!-- header-section-ends -->
   <!-- content-section-starts -->
   <div class="content">
-    <div class="profile-info">
-      <div class="container">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <span><b>Your Business Information</b></span>
-            </h4>
-          </div>
-          <div>
-            <div class="panel-body article-wrapper">
-              <table class="info-table">
-                <tr>
-                  <td><b>Owner Name:</b></td>
-                  <td><?php echo $_SESSION['fullname']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Business Email:</b></td>
-                  <td><?php echo $_SESSION['email']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Contact Number:</b></td>
-                  <td><?php echo $_SESSION['contactNumber']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Restaurant Name:</b></td>
-                  <td><?php echo $restaurantInfo['restaurantName']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Restaurant Area:</b></td>
-                  <td><?php echo $restaurantInfo['location']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Restaurant Number:</b></td>
-                  <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
-                </tr>
-              </table>
-              <a class="owner-manage-btn" href="viewMenu.php">Proceed to your restaurant</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a class="acount-btn" href="owner-addfooditem.html">Add New Menu</a>
     <div class="order-summary">
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <span><b>Your Order Bookings</b></span>
+              <span><b>Your Menu Items</b></span>
             </h4>
           </div>
           <div>
             <div class="panel-body article-wrapper table-responsive">
+              <!--
               <?php
-                if (!$hasOrder) {
+                if (!$hasMenu) {
                   echo "
                     <div class='no-orders'>
-                      <h2>You have no order for your restaurant.</h2>
+                      <h2>You have no menu item for your restaurant.</h2>
                       </div>
                   ";
                 } else {
-                  $orderCount = 0;
+                  $menuCount = 0;
                   while ($row = mysqli_fetch_assoc($result)) {
-                    $customerArray = getCustomerInfo($row['customerID'], $con);
-                    $collapseDivID = "order".$row['orderID'];
-                    $divID = "collapse".$row['orderID'];
+                    $collapseDivID = "restaurant".$row['restaurantID'];
+                    $divID = "collapse".$row['restaurantID'];
                     $divIDTarget = "#".$divID;
-                    if (checkReviewed($row['orderID'], $con)) {
-                      $disabled = '';
-                    } else {
-                      $disabled = 'disabled';
-                    }
                     echo "
-                      <table class='table table-hover profile-table' id=".$row['orderID'].">
+                      <table class='table table-hover profile-table' id=".$row['restaurantID'].">
                         <tr>
-                          <th>Order no.</th>
-                          <th>Order Date</th>
-                          <th>Total Price</th>
-                          <th>Customer Name</th>
-                          <th>Customer Address</th>
-                          <th>Customer Contact Info</th>
-                          <th>Delivery Status</th>
+                          <th>Item no.</th>
+                          <th>Date Created</th>
+                          <th>Item Price</th>
+                          <th>Food Name</th>
+                          <th>Food Image</th>
+                          <th>Food Rating</th>
+                          <th>Food Status</th>
                           <th></th>
                           <th></th>
                         </tr>
                         <tr>
-                          <td>".++$orderCount."</td>
+                          <td>".++$menuCount."</td>
                           <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
-                          <td>".$row['totalPrice']."</td>
-                          <td>".$customerArray['customerName']."</td>
-                          <td>".$customerArray['address']."</td>
-                          <td>".$customerArray['contactNumber']."</td>
+                          <td>".$row['price']."</td>
+                          <td>".$row['foodName']."</td>
+                          <td>".$row['image']."</td>
+                          <td>".$row['avgRating']."</td>
                           <td>
                           <select>";
                           foreach ($options as $option) {
-                            $selected = $row['deliveryStatus'] == $option ? 'selected' : '';
+                            $selected = $row['status'] == $option ? 'selected' : '';
                             echo "<option ".$selected.">".$option."</option>";
                           }
                           echo "</select>
                           </td>
                           <form action='review.php' method='post'>
                             <td><input type='button' value='Update' class='update-btn updatebtn'/></td>
-                            <td><input type='submit' value='Check Review' class='update-btn' ".$disabled."/></td>
-                            <input type='hidden' name='order-id' value=".$row['orderID']." />
                           </form>
                         </tr>
                       </table>
                       <div class='panel-group'>
                         <div class='panel panel-default'>
-                          <div id=".$collapseDivID." class='panel-heading menu-panel' href=".$divIDTarget." data-toggle='collapse'>
-                            <p>Ordered Items List</p>
-                            <i class='pull-right fa fa-chevron-circle-down fa-chevron-circle-up'></i>
-                            <div class='clearfix'></div>
-                          </div>
                           <div id=".$divID." class='panel-collapse collapse order-panel'>";
-                          $foodArray = getFoodInfo($row['orderID'], $con);
-                          // $foodCount = 0;
                           foreach ($foodArray as $food) {
                             echo "<div class='panel-body'>";
                             echo "<p>";
@@ -300,6 +191,7 @@
                         }
                       }
                       ?>
+                    -->
             </div>
           </div>
         </div>
