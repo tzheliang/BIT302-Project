@@ -22,7 +22,7 @@
     $hasMenu = 1;
   }
 
-  $options = array('In Stock', 'Out of Stock');
+  $options = array('Available', 'Out of Stock');
 
  ?>
 <!DOCTYPE html>
@@ -144,7 +144,6 @@
                           <th>Date Created</th>
                           <th>Item Price</th>
                           <th>Food Name</th>
-                          <th>Food Image</th>
                           <th>Food Rating</th>
                           <th>Food Status</th>
                           <th></th>
@@ -155,7 +154,6 @@
                           <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
                           <td>".$row['price']."</td>
                           <td>".$row['foodName']."</td>
-                          <td><img src=".$row['image']."/></td>
                           <td>".$row['avgRating']."</td>
                           <td>
                           <select>";
@@ -237,7 +235,7 @@
       $(".updatebtn").click(function() {
         $.ajax({
           type: 'POST',
-          url: 'updateStatus.php',
+          url: 'updateMenuStatus.php',
           data: {
             update: $(this).closest('table').attr('id'),
             value: $(this).closest('table').find('select').val()
