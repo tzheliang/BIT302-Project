@@ -13,6 +13,6 @@
     $sql = "UPDATE MenuItem SET status ='$value' WHERE foodID = '$foodID'";
     mysqli_query($con, $sql);
 
-    mysqli_close();
+    mysqli_close($con);
   }
  ?>

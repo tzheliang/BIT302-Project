@@ -47,6 +47,20 @@
       window.scrollTo(0, 1);
     }
   </script>
+  <script>
+    var check = <?php
+    $check = isset($_SESSION['deleteOK']) ? 1 : 0;
+    echo $check;
+    ?> ;
+    if (check) {
+      alert("Cannot delete. There is an order made for this item.");
+      $.ajax({
+        type: 'POST',
+        url: 'deleteMenu.php',
+        data: {check: 0}
+      });
+    }
+  </script>
   <!--webfont-->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -138,7 +152,7 @@
                     $divID = "collapse".$row['restaurantID'];
                     $divIDTarget = "#".$divID;
                     echo "
-                      <table class='table table-hover profile-table' id=".$row['restaurantID'].">
+                      <table class='table table-hover profile-table' id=".$row['foodID'].">
                         <tr>
                           <th>Item no.</th>
                           <th>Date Created</th>
@@ -165,9 +179,11 @@
                           </td>
                           <form action='review.php' method='post'>
                             <td><input type='button' value='Update' class='update-btn updatebtn'/></td>
+                            <input type='hidden' name='food-id' value=".$row['foodID']." />
                           </form>
-                          <form action='deleteMenu.php' method='post'>
-                            <td><input type='button' value='DELETE' class='update-btn deletebtn'/></td>
+                          <form action='deleteMenu.php' method='POST'>
+                            <td><input type='submit' name='submit' value='DELETE' class='update-btn deletebtn'/></td>
+                            <input type='hidden' name='food-id' value=".$row['foodID']." />
                           </form>
                         </tr>
                       </table>
@@ -249,20 +265,20 @@
       });
     });
 
-    $(document).ready(function () {
-      $(".deletebtn").click(function() {
-        $.ajax({
-          type: 'POST',
-          url: 'deleteMenu.php',
-          data: {
-            update: $(this).closest('table').attr('id'),
-            value: $(this).closest('table').find('select').val()
-          }
-        })
-        .done(function() { alert("Menu deleted from the system database."); })
-        .fail(function() { alert("Deletion failed."); })
-      });
-    });
+    // $(document).ready(function () {
+    //   $(".deletebtn").click(function() {
+    //     $.ajax({
+    //       type: 'POST',
+    //       url: 'deleteMenu.php',
+    //       data: {
+    //         update: $(this).closest('table').attr('id'),
+    //         value: $(this).closest('table').find('select').val()
+    //       }
+    //     })
+    //     .done(function() { alert("Menu deleted from the system database."); })
+    //     .fail(function() { alert("Deletion failed."); })
+    //   });
+    // });
 
   </script>
   <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
