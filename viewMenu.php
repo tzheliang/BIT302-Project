@@ -8,7 +8,10 @@
   $con = new mysqli($servername, $username, $password, $dbname);
 
   $ownerID = $_SESSION['userID'];
-  $restaurantID = $_POST['restaurantID'];
+  if (!isset($_SESSION['restaurantID'])) {
+    $_SESSION['restaurantID'] = $_POST['restaurantID'];
+  }
+  $restaurantID = $_SESSION['restaurantID'];
   $sql = "SELECT * FROM MenuItem WHERE restaurantID = '$restaurantID'";
 
   $result = mysqli_query($con, $sql);
@@ -120,7 +123,7 @@
           </div>
           <div>
             <div class="panel-body article-wrapper table-responsive">
-              <!--
+
               <?php
                 if (!$hasMenu) {
                   echo "
@@ -152,7 +155,7 @@
                           <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
                           <td>".$row['price']."</td>
                           <td>".$row['foodName']."</td>
-                          <td>".$row['image']."</td>
+                          <td><img src=".$row['image']."/></td>
                           <td>".$row['avgRating']."</td>
                           <td>
                           <select>";
@@ -191,7 +194,7 @@
                         }
                       }
                       ?>
-                    -->
+
             </div>
           </div>
         </div>

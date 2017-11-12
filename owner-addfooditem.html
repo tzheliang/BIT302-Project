@@ -91,7 +91,7 @@
     <div class="main">
       <div class="container">
         <div class="register">
-          <form action="addFoodItem.php" method="post">
+          <form action="addFoodItem.php" method="post" enctype="multipart/form-data">
             <div class="register-top-grid">
               <ul class="previous">
                 <li><a href="viewMenu.php">Back to Main Page</a></li>
@@ -113,6 +113,8 @@
                   <option value="Out of Stock">Out of Stock</option>
                 </select>
               </div>
+              Select image to upload:
+              <input type="file" name="fileToUpload" id="fileToUpload">
               <div class="clearfix"> </div>
             </div>
           <div class="clearfix"> </div>
@@ -122,10 +124,8 @@
             </div>
           </form>
           <!--
-          <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
+          <form action="upload.php" method="post">
+
           </form>
         -->
         </div>

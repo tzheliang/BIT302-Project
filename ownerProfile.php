@@ -18,7 +18,7 @@
     $hasOrder = 1;
   }
 
-  $sql4 = "SELECT restaurantName, location, phoneNumber FROM restaurant WHERE ownerID = '$ownerID'";
+  $sql4 = "SELECT restaurantID ,restaurantName, location, phoneNumber FROM restaurant WHERE ownerID = '$ownerID'";
   $result4 = mysqli_query($con, $sql4);
   $restaurantInfo = mysqli_fetch_assoc($result4);
 
@@ -199,7 +199,11 @@
                   <td><?php echo $restaurantInfo['phoneNumber']; ?></td>
                 </tr>
               </table>
-              <a class="owner-manage-btn" href="viewMenu.php">Proceed to your restaurant</a>
+              <form action='viewMenu.php' method='POST'>
+                <input type="submit" value='Proceed to your restaurant' class='owner-manage-btn'/>
+                <input type='hidden' name='restaurantID' value=<?php echo $restaurantInfo['restaurantID']; ?>  />
+                <!-- <a class="owner-manage-btn" href="viewMenu.php">Proceed to your restaurant</a> -->
+              </form>
             </div>
           </div>
         </div>
