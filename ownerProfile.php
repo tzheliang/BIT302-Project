@@ -205,7 +205,6 @@
         </div>
       </div>
     </div>
-    <!-- reuse bottom code for order booking -->
     <div class="order-summary">
       <div class="container">
         <div class="panel panel-default">
