@@ -166,6 +166,9 @@
                           <form action='review.php' method='post'>
                             <td><input type='button' value='Update' class='update-btn updatebtn'/></td>
                           </form>
+                          <form action='deleteMenu.php' method='post'>
+                            <td><input type='button' value='DELETE' class='update-btn deletebtn'/></td>
+                          </form>
                         </tr>
                       </table>
                       <div class='panel-group'>
@@ -243,6 +246,21 @@
         })
         .done(function() { alert("Status Successfully Updated."); })
         .fail(function() { alert("Status not updated."); })
+      });
+    });
+
+    $(document).ready(function () {
+      $(".deletebtn").click(function() {
+        $.ajax({
+          type: 'POST',
+          url: 'deleteMenu.php',
+          data: {
+            update: $(this).closest('table').attr('id'),
+            value: $(this).closest('table').find('select').val()
+          }
+        })
+        .done(function() { alert("Menu deleted from the system database."); })
+        .fail(function() { alert("Deletion failed."); })
       });
     });
 
