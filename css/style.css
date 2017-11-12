@@ -778,6 +778,24 @@ a.cart-btn {
   -o-border-radius: 20px;
   text-decoration: none;
 }
+input.cart-btn:disabled {
+	background: #d9d9d9;
+}
+input.cart-btn {
+	float: right;
+  border: none;
+  outline: none;
+  padding: 0.3em 1.6em;
+  color: #fff;
+  background: #5BBD50;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-decoration: none;
+}
 a.cart-btn:hover {
  background:#E24425;
 }

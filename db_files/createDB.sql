@@ -75,3 +75,5 @@ CREATE TABLE Rating(
   FOREIGN KEY(feedbackID) REFERENCES Feedback(feedbackID),
   FOREIGN KEY(foodID) REFERENCES MenuItem(foodID)
 );
+
+ALTER TABLE `FoodOrder` CHANGE `timestamp` `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;

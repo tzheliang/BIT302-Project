@@ -8,7 +8,10 @@
   $con = new mysqli($servername, $username, $password, $dbname);
 
   $ownerID = $_SESSION['userID'];
-  $restaurantID = $_POST['restaurantID'];
+  if (!isset($_SESSION['restaurantID'])) {
+    $_SESSION['restaurantID'] = $_POST['restaurantID'];
+  }
+  $restaurantID = $_SESSION['restaurantID'];
   $sql = "SELECT * FROM MenuItem WHERE restaurantID = '$restaurantID'";
 
   $result = mysqli_query($con, $sql);
@@ -19,7 +22,7 @@
     $hasMenu = 1;
   }
 
-  $options = array('In Stock', 'Out of Stock');
+  $options = array('Available', 'Out of Stock');
 
  ?>
 <!DOCTYPE html>
@@ -42,6 +45,20 @@
 
     function hideURLbar() {
       window.scrollTo(0, 1);
+    }
+  </script>
+  <script>
+    var check = <?php
+    $check = isset($_SESSION['deleteOK']) ? 1 : 0;
+    echo $check;
+    ?> ;
+    if (check) {
+      alert("Cannot delete. There is an order made for this item.");
+      $.ajax({
+        type: 'POST',
+        url: 'deleteMenu.php',
+        data: {check: 0}
+      });
     }
   </script>
   <!--webfont-->
@@ -120,7 +137,7 @@
           </div>
           <div>
             <div class="panel-body article-wrapper table-responsive">
-              <!--
+
               <?php
                 if (!$hasMenu) {
                   echo "
@@ -135,13 +152,12 @@
                     $divID = "collapse".$row['restaurantID'];
                     $divIDTarget = "#".$divID;
                     echo "
-                      <table class='table table-hover profile-table' id=".$row['restaurantID'].">
+                      <table class='table table-hover profile-table' id=".$row['foodID'].">
                         <tr>
                           <th>Item no.</th>
                           <th>Date Created</th>
                           <th>Item Price</th>
                           <th>Food Name</th>
-                          <th>Food Image</th>
                           <th>Food Rating</th>
                           <th>Food Status</th>
                           <th></th>
@@ -152,7 +168,6 @@
                           <td>".date('d-m-Y',strtotime($row['timestamp']))."</td>
                           <td>".$row['price']."</td>
                           <td>".$row['foodName']."</td>
-                          <td>".$row['image']."</td>
                           <td>".$row['avgRating']."</td>
                           <td>
                           <select>";
@@ -164,6 +179,11 @@
                           </td>
                           <form action='review.php' method='post'>
                             <td><input type='button' value='Update' class='update-btn updatebtn'/></td>
+                            <input type='hidden' name='food-id' value=".$row['foodID']." />
+                          </form>
+                          <form action='deleteMenu.php' method='POST'>
+                            <td><input type='submit' name='submit' value='DELETE' class='update-btn deletebtn'/></td>
+                            <input type='hidden' name='food-id' value=".$row['foodID']." />
                           </form>
                         </tr>
                       </table>
@@ -191,7 +211,7 @@
                         }
                       }
                       ?>
-                    -->
+
             </div>
           </div>
         </div>
@@ -234,7 +254,7 @@
       $(".updatebtn").click(function() {
         $.ajax({
           type: 'POST',
-          url: 'updateStatus.php',
+          url: 'updateMenuStatus.php',
           data: {
             update: $(this).closest('table').attr('id'),
             value: $(this).closest('table').find('select').val()
@@ -244,6 +264,21 @@
         .fail(function() { alert("Status not updated."); })
       });
     });
+
+    // $(document).ready(function () {
+    //   $(".deletebtn").click(function() {
+    //     $.ajax({
+    //       type: 'POST',
+    //       url: 'deleteMenu.php',
+    //       data: {
+    //         update: $(this).closest('table').attr('id'),
+    //         value: $(this).closest('table').find('select').val()
+    //       }
+    //     })
+    //     .done(function() { alert("Menu deleted from the system database."); })
+    //     .fail(function() { alert("Deletion failed."); })
+    //   });
+    // });
 
   </script>
   <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
